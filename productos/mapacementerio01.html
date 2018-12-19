@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=true; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <style>#map_9f08300f93884fcfbc35483811ee3e49 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.3.6/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.3.6/dist/leaflet-search.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+</head>
+<body>    
+    
+                <div style="position: fixed; 
+                            bottom: 200px; left: 40px; width: 120px; height: 120px; 
+                            border:2px solid blue; z-index:9999; font-size:14px;</d>
+                                <pre>Informacion </pre>
+                              &nbsp; Paginas web &nbsp; <i class="fa fa-map-marker fa-2x" style="color:green"></i><br>
+                              &nbsp; Info arboles &nbsp; <i class="fa fa-map-marker fa-2x" style="color:blue"></i>
+                </div>
+                
+    
+    <div class="folium-map" id="map_9f08300f93884fcfbc35483811ee3e49" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_9f08300f93884fcfbc35483811ee3e49 = L.map(
+        'map_9f08300f93884fcfbc35483811ee3e49', {
+        center: [-33.4172, -70.6505],
+        zoom: 20,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+L.control.scale().addTo(map_9f08300f93884fcfbc35483811ee3e49);
+    
+    
+    
+
+            var macro_element_0c13d3d62a2945369b681bec07186486 = new L.GeoJSON({'generator': 'overpass-ide', 'copyright': 'The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.', 'timestamp': '2018-07-15T19:49:02Z', 'features': [{'id': 'way/33972899', 'geometry': {'coordinates': [[[-70.6394021, -33.413032], [-70.6394358, -33.4129117], [-70.6392486, -33.4128086], [-70.6395106, -33.4122333], [-70.6397556, -33.4117895], [-70.6401264, -33.411118], [-70.6430529, -33.4099086], [-70.6432077, -33.4121646], [-70.6432718, -33.4133399], [-70.6433704, -33.4133328], [-70.6434013, -33.41333], [-70.6434216, -33.4139315], [-70.6409248, -33.414036], [-70.6405814, -33.4139635], [-70.6405905, -33.4135495], [-70.6403674, -33.4135313], [-70.6404172, -33.4131825], [-70.6394021, -33.413032]]], 'type': 'Polygon'}, 'properties': {'name': 'Cementerio Católico', 'name:en': 'Catholic Cementary', '@id': 'way/33972899', 'landuse': 'cemetery'}, 'type': 'Feature'}, {'id': 'way/180645139', 'geometry': {'coordinates': [[[-70.6480499, -33.4131105], [-70.6481096, -33.4133798], [-70.6480288, -33.4133923], [-70.6480352, -33.4134211], [-70.6479412, -33.4134356], [-70.6479353, -33.4134086], [-70.6478617, -33.41342], [-70.6478016, -33.4131489], [-70.6480499, -33.4131105]]], 'type': 'Polygon'}, 'properties': {'name': 'Piedra Verde', '@id': 'way/180645139', 'landuse': 'cemetery', 'building': 'yes'}, 'type': 'Feature'}, {'id': 'way/197839099', 'geometry': {'coordinates': [[[-70.6437883, -33.4141077], [-70.6438046, -33.4138521], [-70.6437686, -33.4125492], [-70.6449589, -33.4125189], [-70.6448382, -33.4106806], [-70.6447369, -33.4090137], [-70.6469861, -33.4085241], [-70.6498121, -33.4079281], [-70.6517403, -33.4075335], [-70.6531646, -33.4072383], [-70.6531438, -33.4081327], [-70.6531403, -33.4084699], [-70.6531548, -33.409417], [-70.6532699, -33.4096002], [-70.6535062, -33.409601], [-70.6535158, -33.4112772], [-70.6527348, -33.4112654], [-70.6527055, -33.4128434], [-70.6526794, -33.4151684], [-70.652693, -33.4174544], [-70.6517996, -33.4174691], [-70.6505497, -33.4176396], [-70.6505529, -33.4176711], [-70.6505467, -33.4176804], [-70.6505086, -33.4177108], [-70.6503611, -33.4177309], [-70.6503316, -33.4177108], [-70.6502109, -33.4177264], [-70.6501867, -33.4177645], [-70.6500297, -33.4177883], [-70.649999, -33.41776], [-70.649889, -33.4177757], [-70.6498675, -33.4178025], [-70.6497066, -33.4178294], [-70.6496798, -33.4178137], [-70.6496777, -33.4177938], [-70.6484317, -33.4179975], [-70.6474619, -33.4175111], [-70.646853, -33.4171371], [-70.6457958, -33.4165576], [-70.6453493, -33.4163836], [-70.6452286, -33.4163259], [-70.6446046, -33.4162446], [-70.6445157, -33.4162594], [-70.6445049, -33.4162571], [-70.6439057, -33.4161581], [-70.6437883, -33.4141077]]], 'type': 'Polygon'}, 'properties': {'name': 'Cementerio General', '@id': 'way/197839099', 'landuse': 'cemetery'}, 'type': 'Feature'}], 'type': 'FeatureCollection'});
+
+            map_9f08300f93884fcfbc35483811ee3e49.addLayer(macro_element_0c13d3d62a2945369b681bec07186486);
+
+            var searchControl = new L.Control.Search({
+                layer: macro_element_0c13d3d62a2945369b681bec07186486,
+                propertyName: 'name',
+            
+                initial: false,
+                zoom: 16,
+                position:'topleft',
+                hideMarkerOnCollapse: true
+            
+            
+                });
+                searchControl.on('search:locationfound', function(e) {
+
+                    e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
+                    if(e.layer._popup)
+                        e.layer.openPopup();
+
+                }).on('search:collapsed', function(e) {
+
+                    macro_element_0c13d3d62a2945369b681bec07186486.eachLayer(function(layer) {   //restore feature color
+                        macro_element_0c13d3d62a2945369b681bec07186486.resetStyle(layer);
+                    });
+                });
+            map_9f08300f93884fcfbc35483811ee3e49.addControl( searchControl );
+
+        
+    var tile_layer_bca0156496974c748d8afd119aa1b94e = L.tileLayer(
+        'https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=3cd85f11f4744c0c8c3bdaab8483cde0',
+        {
+        "attribution": "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> Herramienta de busqueda de arboles a la izquierda: el modo de uso es escribir un tipo de arbol o puede usar la tecla tab y se mostrara una lista con todos los arboles, &copy; <a href=\"https://www.facebook.com/camilo.ceacarvajal/attributions\">Camilo</a>",
+        "detectRetina": false,
+        "maxNativeZoom": 21,
+        "maxZoom": 21,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_9f08300f93884fcfbc35483811ee3e49);
+    var tile_layer_4e5d2d7b924d4cf0914b239b18a1943e = L.tileLayer(
+        'http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+        {
+        "attribution": "&copy; <a href=\"google\">google</a> Libre acceso &copy; <a href=\"https://www.facebook.com/escuelacartografiautem/?hc_ref=ARTfJqRxA2p6s54vw30mlFNBR-WJBMiJPe6u3puPJoDQ1eszgHJtYRS_f-1whQ-GcSs&fref=nf///attributions\">Camilo</a>",
+        "detectRetina": false,
+        "maxNativeZoom": 21,
+        "maxZoom": 21,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_9f08300f93884fcfbc35483811ee3e49);
+    
+            var marker_cluster_c880bdbb38244059a3e2b797e648e36d = L.markerClusterGroup({});
+            map_9f08300f93884fcfbc35483811ee3e49.addLayer(marker_cluster_c880bdbb38244059a3e2b797e648e36d);
+            
+    
+        var marker_b1c6bf6e07c048ac971f5038c1f33d67 = L.marker(
+            [-33.4171, -70.6499],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_c880bdbb38244059a3e2b797e648e36d);
+        
+    
+
+                var icon_f85ea9aad6224b51baf014d5564c08f7 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b1c6bf6e07c048ac971f5038c1f33d67.setIcon(icon_f85ea9aad6224b51baf014d5564c08f7);
+            
+    
+            var popup_13352075af5b41d49ffc3eb33dc901ed = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_66502f57dc804bfcaee2a62181f4f0ce = $('<div id="html_66502f57dc804bfcaee2a62181f4f0ce" style="width: 100.0%; height: 100.0%;"><a href="https://www.mapillary.com/app/?lat=-33.41700338888893&lng=-70.65034652777774&z=17&pKey=aTS8sJ-LHWhn5A6Ti5u8rw" target="_blank">mapillary </a></div>')[0];
+                popup_13352075af5b41d49ffc3eb33dc901ed.setContent(html_66502f57dc804bfcaee2a62181f4f0ce);
+            
+
+            marker_b1c6bf6e07c048ac971f5038c1f33d67.bindPopup(popup_13352075af5b41d49ffc3eb33dc901ed)
+            ;
+
+            
+        
+    
+        var marker_22d8cfdd72ff421993a64c24439281b4 = L.marker(
+            [-33.4173, -70.65],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_c880bdbb38244059a3e2b797e648e36d);
+        
+    
+
+                var icon_c659d61214b1446b98ff9b76979f35e4 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_22d8cfdd72ff421993a64c24439281b4.setIcon(icon_c659d61214b1446b98ff9b76979f35e4);
+            
+    
+            var popup_9ab5b02a5a5c479a875c6d9de6736633 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e56efd28a18e427284ce3f344980aa78 = $('<div id="html_e56efd28a18e427284ce3f344980aa78" style="width: 100.0%; height: 100.0%;"><a href="http://munirecoleta.maps.arcgis.com/apps/webappviewer/index.html?id=7361880dbdcd44d1b02ab91c1d07d5eb" target="_blank"> mapa arcgis </a></div>')[0];
+                popup_9ab5b02a5a5c479a875c6d9de6736633.setContent(html_e56efd28a18e427284ce3f344980aa78);
+            
+
+            marker_22d8cfdd72ff421993a64c24439281b4.bindPopup(popup_9ab5b02a5a5c479a875c6d9de6736633)
+            ;
+
+            
+        
+    
+        var marker_0293b8a2182443b985a0bd5717c33983 = L.marker(
+            [-33.417532, -70.650188],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_c880bdbb38244059a3e2b797e648e36d);
+        
+    
+            var popup_ac1c73554aa84109828f82dd70a6501f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3ef1cdc92a6344109f5d10d575ca3a7f = $('<div id="html_3ef1cdc92a6344109f5d10d575ca3a7f" style="width: 100.0%; height: 100.0%;">     <h1>Palma Chilena</h1><br>     Especie cuyo nombre científico es Jubaea chilensis , pertenece a la familia de las palmáceas, es la palma más austral del mundo y es endémica (nativa) de nuestro país. Se distribuye en forma natural entre La Serena y Talca, aproximadamente; encontrándose algunos ejemplares hasta la zona de Arauco.  Se reconoce porque es la única palmera de tronco liso, además presenta un angostamiento a los ocho a diez metros de altura, que ocurre al llegar a la madurez.     <p>     <code>         Pagina de interes         http://www.profesorenlinea.cl/flora/PalmaChil.htm <br>     </code>     </p>     </div>')[0];
+                popup_ac1c73554aa84109828f82dd70a6501f.setContent(html_3ef1cdc92a6344109f5d10d575ca3a7f);
+            
+
+            marker_0293b8a2182443b985a0bd5717c33983.bindPopup(popup_ac1c73554aa84109828f82dd70a6501f)
+            ;
+
+            
+        
+    
+        var marker_ba72ed43cb324bd1bd90de56f9fc194d = L.marker(
+            [-33.4174, -70.6506],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_c880bdbb38244059a3e2b797e648e36d);
+        
+    
+
+                var icon_917190c421924b4899824fc0cf9f1e13 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ba72ed43cb324bd1bd90de56f9fc194d.setIcon(icon_917190c421924b4899824fc0cf9f1e13);
+            
+    
+            var popup_5a8d295cb40b4086bf32024e67ef4fa9 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_0aac63f5b12f40398aea1c606e22119f = $('<div id="html_0aac63f5b12f40398aea1c606e22119f" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>Arbol</th>       <th>Estado</th>       <th>Especie</th>       <th>Lat,lon</th>       <th>n°</th>       <th>altura</th>     </tr>   </thead>   <tbody>     <tr>       <th>0</th>       <td>Araucaria</td>       <td>Mal</td>       <td>araucos</td>       <td>32.30-72.10</td>       <td>1</td>       <td>20</td>     </tr>     <tr>       <th>1</th>       <td>Palma Chilena</td>       <td>Bien</td>       <td>palmeiras</td>       <td>32.40-72.40</td>       <td>2</td>       <td>13</td>     </tr>   </tbody> </table></div>')[0];
+                popup_5a8d295cb40b4086bf32024e67ef4fa9.setContent(html_0aac63f5b12f40398aea1c606e22119f);
+            
+
+            marker_ba72ed43cb324bd1bd90de56f9fc194d.bindPopup(popup_5a8d295cb40b4086bf32024e67ef4fa9)
+            ;
+
+            
+        
+    
+        var marker_0bf94249cd054efbbd3f61013f04b029 = L.marker(
+            [-33.4172, -70.6505],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_c880bdbb38244059a3e2b797e648e36d);
+        
+    
+
+                var icon_de9865c6af654fc1b67e787a018d5199 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0bf94249cd054efbbd3f61013f04b029.setIcon(icon_de9865c6af654fc1b67e787a018d5199);
+            
+    
+            var popup_e2175b9f7fe44960b5f2c668567d9b67 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f154ab59aea7472aa5d0f1805903937b = $('<div id="html_f154ab59aea7472aa5d0f1805903937b" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>Arbol</th>       <th>Estado</th>       <th>Especie</th>       <th>Lat,lon</th>     </tr>   </thead>   <tbody>     <tr>       <th>0</th>       <td>peumo</td>       <td>Mal</td>       <td>peumito</td>       <td>33.41.-70.65</td>     </tr>     <tr>       <th>1</th>       <td>roble Chilena</td>       <td>Bien</td>       <td>robleiro</td>       <td>32.40-72.40</td>     </tr>   </tbody> </table></div>')[0];
+                popup_e2175b9f7fe44960b5f2c668567d9b67.setContent(html_f154ab59aea7472aa5d0f1805903937b);
+            
+
+            marker_0bf94249cd054efbbd3f61013f04b029.bindPopup(popup_e2175b9f7fe44960b5f2c668567d9b67)
+            ;
+
+            
+        
+    
+        var marker_60b740ea4ea04e6081760de8df56be45 = L.marker(
+            [-33.4174, -70.6504],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_c880bdbb38244059a3e2b797e648e36d);
+        
+    
+
+                var icon_bf008c4577404371b5d33c2fb717f265 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_60b740ea4ea04e6081760de8df56be45.setIcon(icon_bf008c4577404371b5d33c2fb717f265);
+            
+    
+            var popup_d9e81ec496ad48da84f35115908b321d = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_26f8286b59c24769aeba733e30e0a2d9 = $('<div id="html_26f8286b59c24769aeba733e30e0a2d9" style="width: 100.0%; height: 100.0%;"><table border="1" class="dataframe table table-striped table-hover table-condensed table-responsive">   <thead>     <tr style="text-align: right;">       <th></th>       <th>Arbol</th>       <th>Estado</th>     </tr>   </thead>   <tbody>     <tr>       <th>0</th>       <td>Palmera</td>       <td>Extraer</td>     </tr>   </tbody> </table></div>')[0];
+                popup_d9e81ec496ad48da84f35115908b321d.setContent(html_26f8286b59c24769aeba733e30e0a2d9);
+            
+
+            marker_60b740ea4ea04e6081760de8df56be45.bindPopup(popup_d9e81ec496ad48da84f35115908b321d)
+            ;
+
+            
+        
+    
+
+            var polygon_ac46220a213843818e5003c49ba1648c = L.polygon(
+                [[-33.416898, -70.650575], [-33.416964, -70.65017], [-33.417501, -70.650316], [-33.417442, -70.65069]],
+                {
+  "bubblingMouseEvents": true,
+  "color": "green",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "green",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "noClip": true,
+  "opacity": 1.0,
+  "smoothFactor": 100,
+  "stroke": true,
+  "weight": 5
+}
+                )
+                .addTo(map_9f08300f93884fcfbc35483811ee3e49);
+            
+    
+            var popup_06c9e83727c84171896f875e96515f5f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_598e3e9b5b4649fcb7e810ad8932e728 = $('<div id="html_598e3e9b5b4649fcb7e810ad8932e728" style="width: 100.0%; height: 100.0%;">Patio,5</div>')[0];
+                popup_06c9e83727c84171896f875e96515f5f.setContent(html_598e3e9b5b4649fcb7e810ad8932e728);
+            
+
+            polygon_ac46220a213843818e5003c49ba1648c.bindPopup(popup_06c9e83727c84171896f875e96515f5f)
+            ;
+
+            
+        
+    
+        polygon_ac46220a213843818e5003c49ba1648c.bindTooltip(
+            '<div>'
+            + 'click me!' + '</div>',
+            {"sticky": true}
+        );
+        
+    
+            var measure_control_051c1717ddc3491483708ae2e7038cc5 = new L.Control.Measure(
+            {"secondaryAreaUnit": "acres", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryLengthUnit": "miles", "position": "topright"});
+            map_9f08300f93884fcfbc35483811ee3e49.addControl(measure_control_051c1717ddc3491483708ae2e7038cc5);
+
+        
+    
+                var lat_lng_popup_55cf668054cf4431a522ee458fc9a13c = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_55cf668054cf4431a522ee458fc9a13c
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_9f08300f93884fcfbc35483811ee3e49);
+                    }
+                map_9f08300f93884fcfbc35483811ee3e49.on('click', latLngPop);
+            
+    
+            L.control.fullscreen({
+                position: 'topright',
+                title: 'expander',
+                titleCancel: 'salir',
+                forceSeparateButton: true,
+                }).addTo(map_9f08300f93884fcfbc35483811ee3e49);
+            map_9f08300f93884fcfbc35483811ee3e49.on('enterFullscreen', function(){
+                console.log('entered fullscreen');
+            });
+
+        
+    
+            var layer_control_b156cfaa4fb94634b97532070b16226f = {
+                base_layers : { "transporte" : tile_layer_bca0156496974c748d8afd119aa1b94e,"google maps" : tile_layer_4e5d2d7b924d4cf0914b239b18a1943e, },
+                overlays : { "Arboles patio 5" : marker_cluster_c880bdbb38244059a3e2b797e648e36d, }
+                };
+            L.control.layers(
+                layer_control_b156cfaa4fb94634b97532070b16226f.base_layers,
+                layer_control_b156cfaa4fb94634b97532070b16226f.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_9f08300f93884fcfbc35483811ee3e49);
+            
+                tile_layer_4e5d2d7b924d4cf0914b239b18a1943e.remove();
+        
+</script>

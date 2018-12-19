@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <style>#map_7232cbb865a443d9b3b16a209b424778 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_7232cbb865a443d9b3b16a209b424778" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_7232cbb865a443d9b3b16a209b424778 = L.map(
+        'map_7232cbb865a443d9b3b16a209b424778', {
+        center: [41, -70],
+        zoom: 5,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_54855c7d5812418ca940e109ced7b44c = L.tileLayer(
+        'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": "abc"
+}).addTo(map_7232cbb865a443d9b3b16a209b424778);
+    var tile_layer_d627e92d565f4215ad9071f7c88b628b = L.tileLayer(
+        'http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+        {
+        "attribution": "google",
+        "detectRetina": false,
+        "maxNativeZoom": 20,
+        "maxZoom": 20,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_7232cbb865a443d9b3b16a209b424778);
+    var tile_layer_b994534291b443d883ee6a1591b26317 = L.tileLayer(
+        'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+        {
+        "attribution": "google",
+        "detectRetina": false,
+        "maxNativeZoom": 20,
+        "maxZoom": 20,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_7232cbb865a443d9b3b16a209b424778);
+    
+            var macro_element_eceb9389cf53408cb1e680bd18b5624a = L.tileLayer.wms(
+                'https://demo.boundlessgeo.com/geoserver/ows?',
+                {
+  "attribution": "",
+  "format": "image/png",
+  "layers": "nasa:bluemarble",
+  "styles": "",
+  "transparent": false,
+  "version": "1.1.1"
+}
+                ).addTo(map_7232cbb865a443d9b3b16a209b424778);
+
+        
+    
+            var macro_element_4f2e95614fb44c46a1a7f27ec0de754e = L.tileLayer.wms(
+                'http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi',
+                {
+  "attribution": "Weather data \u00a9 2012 IEM Nexrad",
+  "format": "image/png",
+  "layers": "nexrad-n0r-900913",
+  "styles": "",
+  "transparent": true,
+  "version": "1.1.1"
+}
+                ).addTo(map_7232cbb865a443d9b3b16a209b424778);
+
+        
+    var tile_layer_db41fd4ef78147efb783d6f541f7de60 = L.tileLayer(
+        'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        {
+        "attribution": "google",
+        "detectRetina": false,
+        "maxNativeZoom": 20,
+        "maxZoom": 20,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_7232cbb865a443d9b3b16a209b424778);
+    var tile_layer_5efcdded1803478aab76c0d9d9dec30b = L.tileLayer(
+        'https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=3cd85f11f4744c0c8c3bdaab8483cde0',
+        {
+        "attribution": "google",
+        "detectRetina": false,
+        "maxNativeZoom": 20,
+        "maxZoom": 20,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_7232cbb865a443d9b3b16a209b424778);
+    
+            var layer_control_9bc3746969444d3cbd3610d50d44bc93 = {
+                base_layers : { "cartodbdark_matter" : tile_layer_54855c7d5812418ca940e109ced7b44c,"google maps" : tile_layer_d627e92d565f4215ad9071f7c88b628b,"google street view" : tile_layer_b994534291b443d883ee6a1591b26317,"bluemarble" : macro_element_eceb9389cf53408cb1e680bd18b5624a,"argis" : tile_layer_db41fd4ef78147efb783d6f541f7de60,"libre" : tile_layer_5efcdded1803478aab76c0d9d9dec30b, },
+                overlays : { "test" : macro_element_4f2e95614fb44c46a1a7f27ec0de754e, }
+                };
+            L.control.layers(
+                layer_control_9bc3746969444d3cbd3610d50d44bc93.base_layers,
+                layer_control_9bc3746969444d3cbd3610d50d44bc93.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_7232cbb865a443d9b3b16a209b424778);
+            
+                tile_layer_d627e92d565f4215ad9071f7c88b628b.remove();
+                tile_layer_b994534291b443d883ee6a1591b26317.remove();
+                macro_element_eceb9389cf53408cb1e680bd18b5624a.remove();
+                tile_layer_db41fd4ef78147efb783d6f541f7de60.remove();
+                tile_layer_5efcdded1803478aab76c0d9d9dec30b.remove();
+        
+</script>

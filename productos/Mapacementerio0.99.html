@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=true; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <style>#map_2e438de97481489287e8598e8063ced4 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.3.6/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.3.6/dist/leaflet-search.min.css"/>
+    <script src="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_2e438de97481489287e8598e8063ced4" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_2e438de97481489287e8598e8063ced4 = L.map(
+        'map_2e438de97481489287e8598e8063ced4', {
+        center: [-33.41683419747278, -70.64787705335766],
+        zoom: 18,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+L.control.scale().addTo(map_2e438de97481489287e8598e8063ced4);
+    
+    
+    
+
+            var macro_element_f269d1fb9682403799ef31f93fc0e4e8 = new L.GeoJSON({'copyright': 'The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.', 'timestamp': '2018-07-15T19:49:02Z', 'generator': 'overpass-ide', 'type': 'FeatureCollection', 'features': [{'geometry': {'coordinates': [[[-70.6394021, -33.413032], [-70.6394358, -33.4129117], [-70.6392486, -33.4128086], [-70.6395106, -33.4122333], [-70.6397556, -33.4117895], [-70.6401264, -33.411118], [-70.6430529, -33.4099086], [-70.6432077, -33.4121646], [-70.6432718, -33.4133399], [-70.6433704, -33.4133328], [-70.6434013, -33.41333], [-70.6434216, -33.4139315], [-70.6409248, -33.414036], [-70.6405814, -33.4139635], [-70.6405905, -33.4135495], [-70.6403674, -33.4135313], [-70.6404172, -33.4131825], [-70.6394021, -33.413032]]], 'type': 'Polygon'}, 'properties': {'@id': 'way/33972899', 'name:en': 'Catholic Cementary', 'landuse': 'cemetery', 'name': 'Cementerio Católico'}, 'type': 'Feature', 'id': 'way/33972899'}, {'geometry': {'coordinates': [[[-70.6480499, -33.4131105], [-70.6481096, -33.4133798], [-70.6480288, -33.4133923], [-70.6480352, -33.4134211], [-70.6479412, -33.4134356], [-70.6479353, -33.4134086], [-70.6478617, -33.41342], [-70.6478016, -33.4131489], [-70.6480499, -33.4131105]]], 'type': 'Polygon'}, 'properties': {'@id': 'way/180645139', 'landuse': 'cemetery', 'name': 'Piedra Verde', 'building': 'yes'}, 'type': 'Feature', 'id': 'way/180645139'}, {'geometry': {'coordinates': [[[-70.6437883, -33.4141077], [-70.6438046, -33.4138521], [-70.6437686, -33.4125492], [-70.6449589, -33.4125189], [-70.6448382, -33.4106806], [-70.6447369, -33.4090137], [-70.6469861, -33.4085241], [-70.6498121, -33.4079281], [-70.6517403, -33.4075335], [-70.6531646, -33.4072383], [-70.6531438, -33.4081327], [-70.6531403, -33.4084699], [-70.6531548, -33.409417], [-70.6532699, -33.4096002], [-70.6535062, -33.409601], [-70.6535158, -33.4112772], [-70.6527348, -33.4112654], [-70.6527055, -33.4128434], [-70.6526794, -33.4151684], [-70.652693, -33.4174544], [-70.6517996, -33.4174691], [-70.6505497, -33.4176396], [-70.6505529, -33.4176711], [-70.6505467, -33.4176804], [-70.6505086, -33.4177108], [-70.6503611, -33.4177309], [-70.6503316, -33.4177108], [-70.6502109, -33.4177264], [-70.6501867, -33.4177645], [-70.6500297, -33.4177883], [-70.649999, -33.41776], [-70.649889, -33.4177757], [-70.6498675, -33.4178025], [-70.6497066, -33.4178294], [-70.6496798, -33.4178137], [-70.6496777, -33.4177938], [-70.6484317, -33.4179975], [-70.6474619, -33.4175111], [-70.646853, -33.4171371], [-70.6457958, -33.4165576], [-70.6453493, -33.4163836], [-70.6452286, -33.4163259], [-70.6446046, -33.4162446], [-70.6445157, -33.4162594], [-70.6445049, -33.4162571], [-70.6439057, -33.4161581], [-70.6437883, -33.4141077]]], 'type': 'Polygon'}, 'properties': {'@id': 'way/197839099', 'landuse': 'cemetery', 'name': 'Cementerio General'}, 'type': 'Feature', 'id': 'way/197839099'}]});
+
+            map_2e438de97481489287e8598e8063ced4.addLayer(macro_element_f269d1fb9682403799ef31f93fc0e4e8);
+
+            var searchControl = new L.Control.Search({
+                layer: macro_element_f269d1fb9682403799ef31f93fc0e4e8,
+                propertyName: 'name',
+            
+                initial: false,
+                zoom: 18,
+                position:'topleft',
+                hideMarkerOnCollapse: true
+            
+            
+                });
+                searchControl.on('search:locationfound', function(e) {
+
+                    e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
+                    if(e.layer._popup)
+                        e.layer.openPopup();
+
+                }).on('search:collapsed', function(e) {
+
+                    macro_element_f269d1fb9682403799ef31f93fc0e4e8.eachLayer(function(layer) {   //restore feature color
+                        macro_element_f269d1fb9682403799ef31f93fc0e4e8.resetStyle(layer);
+                    });
+                });
+            map_2e438de97481489287e8598e8063ced4.addControl( searchControl );
+
+        
+    var tile_layer_7fd9533bc4da497385c87439d2cad241 = L.tileLayer(
+        'https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=3cd85f11f4744c0c8c3bdaab8483cde0',
+        {
+        "attribution": "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> UTEM Cartografia, &copy; <a href=\"https://github.com/camiloceacarvajal?tab=repositories/attributions\">Camilo-Edgar-Bryan-Maria jose-Danilo-Isaac-Diego-Patricio(Github)</a>",
+        "detectRetina": false,
+        "maxNativeZoom": 21,
+        "maxZoom": 21,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_2e438de97481489287e8598e8063ced4);
+    var tile_layer_3bd7db51d21040c7aa4fcda264ae575a = L.tileLayer(
+        'http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+        {
+        "attribution": "&copy; <a href=\"https://earth.google.com/web/\">google</a> UTEM Cartografia, &copy; <a href=\"https://github.com/camiloceacarvajal?tab=repositories/attributions\">Camilo-Edgar-Bryan-Maria jose-Danilo-Isaac-Diego-Patricio(Github)</a>",
+        "detectRetina": false,
+        "maxNativeZoom": 21,
+        "maxZoom": 21,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_2e438de97481489287e8598e8063ced4);
+    
+        var marker_92c566d292fd45f6b77bd2c7ef94ecac = L.marker(
+            [-33.4177, -70.6504],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_2e438de97481489287e8598e8063ced4);
+        
+    
+
+                var icon_783b67a233184db9853fa7d2ed9ee3a8 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_92c566d292fd45f6b77bd2c7ef94ecac.setIcon(icon_783b67a233184db9853fa7d2ed9ee3a8);
+            
+    
+            var popup_552bb3c3ee8c4ee394591c010afd7ca2 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_c6706058ba7e4328b5f5c98a89158e0e = $('<div id="html_c6706058ba7e4328b5f5c98a89158e0e" style="width: 100.0%; height: 100.0%;"><a href="http://munirecoleta.maps.arcgis.com/apps/webappviewer/index.html?id=7361880dbdcd44d1b02ab91c1d07d5eb" target="_blank"> Mapa Recoleta </a></div>')[0];
+                popup_552bb3c3ee8c4ee394591c010afd7ca2.setContent(html_c6706058ba7e4328b5f5c98a89158e0e);
+            
+
+            marker_92c566d292fd45f6b77bd2c7ef94ecac.bindPopup(popup_552bb3c3ee8c4ee394591c010afd7ca2)
+            ;
+
+            
+        
+    
+        var marker_ba2e18c48d4f43278efbfbe5b5764210 = L.marker(
+            [-33.4178, -70.6497],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_2e438de97481489287e8598e8063ced4);
+        
+    
+
+                var icon_34106f770c764686a3b619cf063a5b17 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ba2e18c48d4f43278efbfbe5b5764210.setIcon(icon_34106f770c764686a3b619cf063a5b17);
+            
+    
+            var popup_631d8d995b2143ac88762c0f7bb59e37 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7c57fc56ee0b49d68fe9a70d26d6e3f6 = $('<div id="html_7c57fc56ee0b49d68fe9a70d26d6e3f6" style="width: 100.0%; height: 100.0%;"><a href="https://www.mapillary.com/app/?lat=-33.41700338888893&lng=-70.65034652777774&z=17&pKey=aTS8sJ-LHWhn5A6Ti5u8rw" target="_blank">Mapa Foto </a></div>')[0];
+                popup_631d8d995b2143ac88762c0f7bb59e37.setContent(html_7c57fc56ee0b49d68fe9a70d26d6e3f6);
+            
+
+            marker_ba2e18c48d4f43278efbfbe5b5764210.bindPopup(popup_631d8d995b2143ac88762c0f7bb59e37)
+            ;
+
+            
+        
+    
+            var measure_control_2ba8fa69824747b2af147e54c78ee1c7 = new L.Control.Measure(
+            {"primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "primaryAreaUnit": "sqmeters", "secondaryLengthUnit": "miles", "position": "topright"});
+            map_2e438de97481489287e8598e8063ced4.addControl(measure_control_2ba8fa69824747b2af147e54c78ee1c7);
+
+        
+    
+            L.control.fullscreen({
+                position: 'topright',
+                title: 'Expandir',
+                titleCancel: 'salir',
+                forceSeparateButton: true,
+                }).addTo(map_2e438de97481489287e8598e8063ced4);
+            map_2e438de97481489287e8598e8063ced4.on('enterFullscreen', function(){
+                console.log('entered fullscreen');
+            });
+
+        
+    
+            var marker_cluster_bc67d32343bd4584819699b5d90878a6 = L.markerClusterGroup({});
+            map_2e438de97481489287e8598e8063ced4.addLayer(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+            
+    
+        var marker_ea6cbccb3af24ba38e6aa6f70a9b1504 = L.marker(
+            [-33.41665799729526, -70.64788299612701],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_26d051edaae64b9dade2759305b12ecd = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ea6cbccb3af24ba38e6aa6f70a9b1504.setIcon(icon_26d051edaae64b9dade2759305b12ecd);
+            
+    
+            var popup_ec67649e4a534fdcbbeb5f6f61ccc08f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ed2fe6120d07409b9a95f2f15972ad6c = $('<div id="html_ed2fe6120d07409b9a95f2f15972ad6c" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>0</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>1</td>     </tr>     <tr>       <th>Altura</th>       <td>4</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4167</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6479</td>     </tr>     <tr>       <th>Radio</th>       <td>2</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AP01</td>     </tr>     <tr>       <th>Status</th>       <td>Regular</td>     </tr>     <tr>       <th>Dap</th>       <td>15</td>     </tr>     <tr>       <th>Nombre</th>       <td>CIruelo rojo</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>1</td>     </tr>     <tr>       <th>Fisico</th>       <td>Daño físIco</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_ec67649e4a534fdcbbeb5f6f61ccc08f.setContent(html_ed2fe6120d07409b9a95f2f15972ad6c);
+            
+
+            marker_ea6cbccb3af24ba38e6aa6f70a9b1504.bindPopup(popup_ec67649e4a534fdcbbeb5f6f61ccc08f)
+            ;
+
+            
+        
+    
+        var marker_23bd51edb4874fdc8a78dae030677af0 = L.marker(
+            [-33.416737038642175, -70.64761796034873],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_39e8d0b0dc314ea9aad7a8f793b6e159 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_23bd51edb4874fdc8a78dae030677af0.setIcon(icon_39e8d0b0dc314ea9aad7a8f793b6e159);
+            
+    
+            var popup_30f73970f3a24b9b8fe1c4fede54f3d4 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7f4738c3ccd043fcb7bebcd61fe2d1ae = $('<div id="html_7f4738c3ccd043fcb7bebcd61fe2d1ae" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>1</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>2</td>     </tr>     <tr>       <th>Altura</th>       <td>3</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4167</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6476</td>     </tr>     <tr>       <th>Radio</th>       <td>1</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AP02</td>     </tr>     <tr>       <th>Status</th>       <td>Regular</td>     </tr>     <tr>       <th>Dap</th>       <td>19</td>     </tr>     <tr>       <th>Nombre</th>       <td>CIruelo rojo</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>2</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_30f73970f3a24b9b8fe1c4fede54f3d4.setContent(html_7f4738c3ccd043fcb7bebcd61fe2d1ae);
+            
+
+            marker_23bd51edb4874fdc8a78dae030677af0.bindPopup(popup_30f73970f3a24b9b8fe1c4fede54f3d4)
+            ;
+
+            
+        
+    
+        var marker_248c7e5f850c4a2e901b704e32b88ac2 = L.marker(
+            [-33.41684097424149, -70.64801400527358],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_ce39a32cdd3d40fb8b50416978541998 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_248c7e5f850c4a2e901b704e32b88ac2.setIcon(icon_ce39a32cdd3d40fb8b50416978541998);
+            
+    
+            var popup_2369c7a6baac47ee9cd5ce64d665336d = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_79d717256fb64452a553ba290f3a2974 = $('<div id="html_79d717256fb64452a553ba290f3a2974" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>2</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>3</td>     </tr>     <tr>       <th>Altura</th>       <td>3</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4168</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.648</td>     </tr>     <tr>       <th>Radio</th>       <td>1,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AP03</td>     </tr>     <tr>       <th>Status</th>       <td>Regular</td>     </tr>     <tr>       <th>Dap</th>       <td>13</td>     </tr>     <tr>       <th>Nombre</th>       <td>CIruelo rojo</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>3</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_2369c7a6baac47ee9cd5ce64d665336d.setContent(html_79d717256fb64452a553ba290f3a2974);
+            
+
+            marker_248c7e5f850c4a2e901b704e32b88ac2.bindPopup(popup_2369c7a6baac47ee9cd5ce64d665336d)
+            ;
+
+            
+        
+    
+        var marker_9b769fd4c54a4ae396705a27233643df = L.marker(
+            [-33.416689010336995, -70.64785801805556],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_fb1769d796f742c99eb0f99d629eb0e6 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9b769fd4c54a4ae396705a27233643df.setIcon(icon_fb1769d796f742c99eb0f99d629eb0e6);
+            
+    
+            var popup_4e1faf6d3ba9412f859c4e31ae25d6d5 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_561e3ae9fb8646979f9796f1db435c56 = $('<div id="html_561e3ae9fb8646979f9796f1db435c56" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>3</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>4</td>     </tr>     <tr>       <th>Altura</th>       <td>2,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4167</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6479</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AP04</td>     </tr>     <tr>       <th>Status</th>       <td>Regular</td>     </tr>     <tr>       <th>Dap</th>       <td>11</td>     </tr>     <tr>       <th>Nombre</th>       <td>CIruelo rojo</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>4</td>     </tr>     <tr>       <th>Fisico</th>       <td>Daño físIco</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_4e1faf6d3ba9412f859c4e31ae25d6d5.setContent(html_561e3ae9fb8646979f9796f1db435c56);
+            
+
+            marker_9b769fd4c54a4ae396705a27233643df.bindPopup(popup_4e1faf6d3ba9412f859c4e31ae25d6d5)
+            ;
+
+            
+        
+    
+        var marker_fdef641a880e40c7b6ee4e7a7dc776f0 = L.marker(
+            [-33.417030991986394, -70.64773798920214],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_3ee8052ccbda4c5b908b36b5295728ba = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fdef641a880e40c7b6ee4e7a7dc776f0.setIcon(icon_3ee8052ccbda4c5b908b36b5295728ba);
+            
+    
+            var popup_1ed314e9011240e7aa53b3d3ad4944ef = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_0fba4eedf8614f70aa65cb24cee90e2b = $('<div id="html_0fba4eedf8614f70aa65cb24cee90e2b" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>4</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>5</td>     </tr>     <tr>       <th>Altura</th>       <td>2,2</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.417</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6477</td>     </tr>     <tr>       <th>Radio</th>       <td>1,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AP05</td>     </tr>     <tr>       <th>Status</th>       <td>Regular</td>     </tr>     <tr>       <th>Dap</th>       <td>11</td>     </tr>     <tr>       <th>Nombre</th>       <td>CIruelo rojo</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>5</td>     </tr>     <tr>       <th>Fisico</th>       <td>Daño físIco</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_1ed314e9011240e7aa53b3d3ad4944ef.setContent(html_0fba4eedf8614f70aa65cb24cee90e2b);
+            
+
+            marker_fdef641a880e40c7b6ee4e7a7dc776f0.bindPopup(popup_1ed314e9011240e7aa53b3d3ad4944ef)
+            ;
+
+            
+        
+    
+        var marker_fab75350e369485197f40ec2cfd240de = L.marker(
+            [-33.41663201339543, -70.6480399891734],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_bd5b7e2cc87f4def9a4babbe5893a91c = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fab75350e369485197f40ec2cfd240de.setIcon(icon_bd5b7e2cc87f4def9a4babbe5893a91c);
+            
+    
+            var popup_714c9e55f765499a8a6d5c0e49faf510 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_9040fd830ad6427ebf119ddcafe3e529 = $('<div id="html_9040fd830ad6427ebf119ddcafe3e529" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>5</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>6</td>     </tr>     <tr>       <th>Altura</th>       <td>0,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4166</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.648</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AI06</td>     </tr>     <tr>       <th>Status</th>       <td>Malo</td>     </tr>     <tr>       <th>Dap</th>       <td>50</td>     </tr>     <tr>       <th>Nombre</th>       <td>Palmera canarIa</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>EXTRACCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>6</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_714c9e55f765499a8a6d5c0e49faf510.setContent(html_9040fd830ad6427ebf119ddcafe3e529);
+            
+
+            marker_fab75350e369485197f40ec2cfd240de.bindPopup(popup_714c9e55f765499a8a6d5c0e49faf510)
+            ;
+
+            
+        
+    
+        var marker_d0c8c5e5ee0542d3bc448ac7402be4d0 = L.marker(
+            [-33.41703996062279, -70.64781602472065],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_6e5e8cb2d8b14473ae8f2271f428be57 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d0c8c5e5ee0542d3bc448ac7402be4d0.setIcon(icon_6e5e8cb2d8b14473ae8f2271f428be57);
+            
+    
+            var popup_e531cd3e04444c1d923dfcd71263e3b4 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ed7702992c8e4b76aa3eff87685f23c8 = $('<div id="html_ed7702992c8e4b76aa3eff87685f23c8" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>6</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>7</td>     </tr>     <tr>       <th>Altura</th>       <td>2,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.417</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6478</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AI07</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>3</td>     </tr>     <tr>       <th>Nombre</th>       <td>CIruelo verde</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>7</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_e531cd3e04444c1d923dfcd71263e3b4.setContent(html_ed7702992c8e4b76aa3eff87685f23c8);
+            
+
+            marker_d0c8c5e5ee0542d3bc448ac7402be4d0.bindPopup(popup_e531cd3e04444c1d923dfcd71263e3b4)
+            ;
+
+            
+        
+    
+        var marker_1f980ec7e6e8465cbf7d324be893471f = L.marker(
+            [-33.417054964229465, -70.64788400195539],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_7c7cac4070444d319f2aeba592b5ac96 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1f980ec7e6e8465cbf7d324be893471f.setIcon(icon_7c7cac4070444d319f2aeba592b5ac96);
+            
+    
+            var popup_bab0895dba8b4d4186b135a50754c9de = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b4549986b2f84cc3addba0c13c6664bc = $('<div id="html_b4549986b2f84cc3addba0c13c6664bc" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>7</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>8</td>     </tr>     <tr>       <th>Altura</th>       <td>3,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4171</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6479</td>     </tr>     <tr>       <th>Radio</th>       <td>1</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AI08</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>6</td>     </tr>     <tr>       <th>Nombre</th>       <td>CIruelo verde</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>8</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_bab0895dba8b4d4186b135a50754c9de.setContent(html_b4549986b2f84cc3addba0c13c6664bc);
+            
+
+            marker_1f980ec7e6e8465cbf7d324be893471f.bindPopup(popup_bab0895dba8b4d4186b135a50754c9de)
+            ;
+
+            
+        
+    
+        var marker_7a8f048f0ec448ea9639d7cd7ae4a30e = L.marker(
+            [-33.41700098477304, -70.64795197919011],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_352645fd48634d3eaf11aa45f7e63a65 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7a8f048f0ec448ea9639d7cd7ae4a30e.setIcon(icon_352645fd48634d3eaf11aa45f7e63a65);
+            
+    
+            var popup_5d2f6c2d54db4d66adfc9a0b3e6e1ecf = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_cc3bd87dcd3841df9d4358568e2dcd9d = $('<div id="html_cc3bd87dcd3841df9d4358568e2dcd9d" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>8</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>9</td>     </tr>     <tr>       <th>Altura</th>       <td>0,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.417</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.648</td>     </tr>     <tr>       <th>Radio</th>       <td>2</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AI09</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>50</td>     </tr>     <tr>       <th>Nombre</th>       <td>Palmera canarIa</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>CORTA</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>9</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_5d2f6c2d54db4d66adfc9a0b3e6e1ecf.setContent(html_cc3bd87dcd3841df9d4358568e2dcd9d);
+            
+
+            marker_7a8f048f0ec448ea9639d7cd7ae4a30e.bindPopup(popup_5d2f6c2d54db4d66adfc9a0b3e6e1ecf)
+            ;
+
+            
+        
+    
+        var marker_6f7565297dc446918f3acdb44636d680 = L.marker(
+            [-33.416964020580046, -70.64806396141648],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_eb89f3e70a0840a6b6d3c08d1a668fc3 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6f7565297dc446918f3acdb44636d680.setIcon(icon_eb89f3e70a0840a6b6d3c08d1a668fc3);
+            
+    
+            var popup_fe8edd5afbcf442dbaa2ce807c1c7840 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_c1809a8bd5c443a8a3e909dc0f189a97 = $('<div id="html_c1809a8bd5c443a8a3e909dc0f189a97" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>9</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>10</td>     </tr>     <tr>       <th>Altura</th>       <td>8</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.417</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6481</td>     </tr>     <tr>       <th>Radio</th>       <td>4</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AI10</td>     </tr>     <tr>       <th>Status</th>       <td>Regular</td>     </tr>     <tr>       <th>Dap</th>       <td>44</td>     </tr>     <tr>       <th>Nombre</th>       <td>CassuarIna</td>     </tr>     <tr>       <th>Calle</th>       <td>Adm. PonIente</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>10</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_fe8edd5afbcf442dbaa2ce807c1c7840.setContent(html_c1809a8bd5c443a8a3e909dc0f189a97);
+            
+
+            marker_6f7565297dc446918f3acdb44636d680.bindPopup(popup_fe8edd5afbcf442dbaa2ce807c1c7840)
+            ;
+
+            
+        
+    
+        var marker_12139bbc9742467c9338d3c5317266e2 = L.marker(
+            [-33.41698598116636, -70.64799799583852],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_d0d6bbe09d3e4fcdb9da7be062114157 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_12139bbc9742467c9338d3c5317266e2.setIcon(icon_d0d6bbe09d3e4fcdb9da7be062114157);
+            
+    
+            var popup_ec61d7f385bc4a26b9e9104ca77f3bfc = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ebc31ac7167d4831a13141cebc3a8bf6 = $('<div id="html_ebc31ac7167d4831a13141cebc3a8bf6" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>10</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>11</td>     </tr>     <tr>       <th>Altura</th>       <td>6</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.417</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.648</td>     </tr>     <tr>       <th>Radio</th>       <td>3,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AP11</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>25</td>     </tr>     <tr>       <th>Nombre</th>       <td>MelIa</td>     </tr>     <tr>       <th>Calle</th>       <td>ValdIvIeso</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>11</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_ec61d7f385bc4a26b9e9104ca77f3bfc.setContent(html_ebc31ac7167d4831a13141cebc3a8bf6);
+            
+
+            marker_12139bbc9742467c9338d3c5317266e2.bindPopup(popup_ec61d7f385bc4a26b9e9104ca77f3bfc)
+            ;
+
+            
+        
+    
+        var marker_f6bcc24db45c460db4c754389ef2053e = L.marker(
+            [-33.41679001227021, -70.64813202247024],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_4fe9643899994106aa4e385fc6c72c18 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f6bcc24db45c460db4c754389ef2053e.setIcon(icon_4fe9643899994106aa4e385fc6c72c18);
+            
+    
+            var popup_9c8e0665b4ac47d4b49dceccef7861ac = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8ba373d3eab74473926ec1b7f926e54f = $('<div id="html_8ba373d3eab74473926ec1b7f926e54f" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>11</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>12</td>     </tr>     <tr>       <th>Altura</th>       <td>0,2</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4168</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6481</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AP12</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>20</td>     </tr>     <tr>       <th>Nombre</th>       <td>Palmera canarIa</td>     </tr>     <tr>       <th>Calle</th>       <td>ValdIvIeso</td>     </tr>     <tr>       <th>TratamIento</th>       <td>EXTRACCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>12</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_9c8e0665b4ac47d4b49dceccef7861ac.setContent(html_8ba373d3eab74473926ec1b7f926e54f);
+            
+
+            marker_f6bcc24db45c460db4c754389ef2053e.bindPopup(popup_9c8e0665b4ac47d4b49dceccef7861ac)
+            ;
+
+            
+        
+    
+        var marker_02a79d3a42564911ad6e2bd5b8fcd584 = L.marker(
+            [-33.41674801893532, -70.6481480319053],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_7f755999a72743a38ba846cd9b6cf118 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_02a79d3a42564911ad6e2bd5b8fcd584.setIcon(icon_7f755999a72743a38ba846cd9b6cf118);
+            
+    
+            var popup_cbb2bfcd95a54e39b9ec4fc4c859f1a9 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f01e83ac885e4dff9cbf3af61ce0ff4e = $('<div id="html_f01e83ac885e4dff9cbf3af61ce0ff4e" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>12</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>13</td>     </tr>     <tr>       <th>Altura</th>       <td>3</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4167</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6481</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>004AI33</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>2</td>     </tr>     <tr>       <th>Nombre</th>       <td>Laurel</td>     </tr>     <tr>       <th>Calle</th>       <td>SazIe</td>     </tr>     <tr>       <th>TratamIento</th>       <td>ALTURA</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>13</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_cbb2bfcd95a54e39b9ec4fc4c859f1a9.setContent(html_f01e83ac885e4dff9cbf3af61ce0ff4e);
+            
+
+            marker_02a79d3a42564911ad6e2bd5b8fcd584.bindPopup(popup_cbb2bfcd95a54e39b9ec4fc4c859f1a9)
+            ;
+
+            
+        
+    
+        var marker_28d279e399254b66ad18b1f405043f9a = L.marker(
+            [-33.41667601838708, -70.64777503721416],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_3d3c2c1f1e0244babfcae41b63cab779 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_28d279e399254b66ad18b1f405043f9a.setIcon(icon_3d3c2c1f1e0244babfcae41b63cab779);
+            
+    
+            var popup_432e3cce64184192b8b5e53a220406b0 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_11160bd8f95449ab83ea04a5d7e44604 = $('<div id="html_11160bd8f95449ab83ea04a5d7e44604" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>13</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>14</td>     </tr>     <tr>       <th>Altura</th>       <td>0</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4167</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6478</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005AP14</td>     </tr>     <tr>       <th>Status</th>       <td>Malo</td>     </tr>     <tr>       <th>Dap</th>       <td>35</td>     </tr>     <tr>       <th>Nombre</th>       <td>Alamo</td>     </tr>     <tr>       <th>Calle</th>       <td>SazIe</td>     </tr>     <tr>       <th>TratamIento</th>       <td>CORTA</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>14</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_432e3cce64184192b8b5e53a220406b0.setContent(html_11160bd8f95449ab83ea04a5d7e44604);
+            
+
+            marker_28d279e399254b66ad18b1f405043f9a.bindPopup(popup_432e3cce64184192b8b5e53a220406b0)
+            ;
+
+            
+        
+    
+        var marker_a6c351cf709742e981d194d92e0219fb = L.marker(
+            [-33.416710970923305, -70.6477170344442],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_a86b04a4780e46198b47d52373c4606b = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a6c351cf709742e981d194d92e0219fb.setIcon(icon_a86b04a4780e46198b47d52373c4606b);
+            
+    
+            var popup_b35c565d63ba435983a8d0de17dd28dd = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_bec67a90d3a64515a01dd9f1a3acb9a5 = $('<div id="html_bec67a90d3a64515a01dd9f1a3acb9a5" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>14</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>15</td>     </tr>     <tr>       <th>Altura</th>       <td>2,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4167</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6477</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005RI15</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>3</td>     </tr>     <tr>       <th>Nombre</th>       <td>AIlantus</td>     </tr>     <tr>       <th>Calle</th>       <td>SazIe</td>     </tr>     <tr>       <th>TratamIento</th>       <td>HERBICIDA</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>15</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_b35c565d63ba435983a8d0de17dd28dd.setContent(html_bec67a90d3a64515a01dd9f1a3acb9a5);
+            
+
+            marker_a6c351cf709742e981d194d92e0219fb.bindPopup(popup_b35c565d63ba435983a8d0de17dd28dd)
+            ;
+
+            
+        
+    
+        var marker_c74adaef00ea4642aa871126d00380cb = L.marker(
+            [-33.416944993659854, -70.6476110033691],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_bd0d80fb59394a089af47da8fd6a8c4b = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c74adaef00ea4642aa871126d00380cb.setIcon(icon_bd0d80fb59394a089af47da8fd6a8c4b);
+            
+    
+            var popup_04af4fa34ed44fc4ab2ca61e4f31d202 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8178b7356b094a6a98d3cd3ed8d8e2ee = $('<div id="html_8178b7356b094a6a98d3cd3ed8d8e2ee" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>15</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>16</td>     </tr>     <tr>       <th>Altura</th>       <td>2,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4169</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6476</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005RI16</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>3</td>     </tr>     <tr>       <th>Nombre</th>       <td>AIlantus</td>     </tr>     <tr>       <th>Calle</th>       <td>SazIe</td>     </tr>     <tr>       <th>TratamIento</th>       <td>HERBICIDA</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>16</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_04af4fa34ed44fc4ab2ca61e4f31d202.setContent(html_8178b7356b094a6a98d3cd3ed8d8e2ee);
+            
+
+            marker_c74adaef00ea4642aa871126d00380cb.bindPopup(popup_04af4fa34ed44fc4ab2ca61e4f31d202)
+            ;
+
+            
+        
+    
+        var marker_79879f909ea54de8ab79b46b132fea46 = L.marker(
+            [-33.416754975914955, -70.64792599529028],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_d8a7e033b6364d4fb31f5325bba00631 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_79879f909ea54de8ab79b46b132fea46.setIcon(icon_d8a7e033b6364d4fb31f5325bba00631);
+            
+    
+            var popup_84fcdfd935ac4670bcddd745252d8895 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3a1687c6a3c445759ed2f33ec88b12ee = $('<div id="html_3a1687c6a3c445759ed2f33ec88b12ee" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>16</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>17</td>     </tr>     <tr>       <th>Altura</th>       <td>2,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4168</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6479</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005RI17</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>3</td>     </tr>     <tr>       <th>Nombre</th>       <td>AIlantus</td>     </tr>     <tr>       <th>Calle</th>       <td>SazIe</td>     </tr>     <tr>       <th>TratamIento</th>       <td>HERBICIDA</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>17</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_84fcdfd935ac4670bcddd745252d8895.setContent(html_3a1687c6a3c445759ed2f33ec88b12ee);
+            
+
+            marker_79879f909ea54de8ab79b46b132fea46.bindPopup(popup_84fcdfd935ac4670bcddd745252d8895)
+            ;
+
+            
+        
+    
+        var marker_7030026c5a3d458b93db1bf290f3f01d = L.marker(
+            [-33.41695496812463, -70.64816404134034],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_f1c9959dd9b04181bb5e9984cf9d03e7 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7030026c5a3d458b93db1bf290f3f01d.setIcon(icon_f1c9959dd9b04181bb5e9984cf9d03e7);
+            
+    
+            var popup_49bca8232b554421855015f25bddb00f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_819c9ef9fc534f409df6daaca0eef903 = $('<div id="html_819c9ef9fc534f409df6daaca0eef903" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>17</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>18</td>     </tr>     <tr>       <th>Altura</th>       <td>2,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.417</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6482</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005RI18</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>3</td>     </tr>     <tr>       <th>Nombre</th>       <td>AIlantus</td>     </tr>     <tr>       <th>Calle</th>       <td>SazIe</td>     </tr>     <tr>       <th>TratamIento</th>       <td>HERBICIDA</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>18</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_49bca8232b554421855015f25bddb00f.setContent(html_819c9ef9fc534f409df6daaca0eef903);
+            
+
+            marker_7030026c5a3d458b93db1bf290f3f01d.bindPopup(popup_49bca8232b554421855015f25bddb00f)
+            ;
+
+            
+        
+    
+        var marker_199f4c4197354e5b93f7e7b7770361b2 = L.marker(
+            [-33.41669102199376, -70.64762500114738],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_1029065de1d347b18b770df4e1616289 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_199f4c4197354e5b93f7e7b7770361b2.setIcon(icon_1029065de1d347b18b770df4e1616289);
+            
+    
+            var popup_5ec69c932f4046dcafb5eac2bad8a3b7 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3f7d480ac8d24ecdb0488b96e9a3c197 = $('<div id="html_3f7d480ac8d24ecdb0488b96e9a3c197" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>18</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>19</td>     </tr>     <tr>       <th>Altura</th>       <td>2,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4167</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6476</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005RI19</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>3</td>     </tr>     <tr>       <th>Nombre</th>       <td>AIlantus</td>     </tr>     <tr>       <th>Calle</th>       <td>SazIe</td>     </tr>     <tr>       <th>TratamIento</th>       <td>HERBICIDA</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>19</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_5ec69c932f4046dcafb5eac2bad8a3b7.setContent(html_3f7d480ac8d24ecdb0488b96e9a3c197);
+            
+
+            marker_199f4c4197354e5b93f7e7b7770361b2.bindPopup(popup_5ec69c932f4046dcafb5eac2bad8a3b7)
+            ;
+
+            
+        
+    
+        var marker_c1f6c3848bb048a4a632bf0a356fc1c8 = L.marker(
+            [-33.41677903197705, -70.6475779786706],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_bc67d32343bd4584819699b5d90878a6);
+        
+    
+
+                var icon_5a072b26273e4ba39c847c8b6b615563 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c1f6c3848bb048a4a632bf0a356fc1c8.setIcon(icon_5a072b26273e4ba39c847c8b6b615563);
+            
+    
+            var popup_6a72152bdf3e4971b860646e1b146405 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_818e630969954a2e8fd7a4a1d7b16085 = $('<div id="html_818e630969954a2e8fd7a4a1d7b16085" style="width: 100.0%; height: 100.0%;"><b><table border="1" class="dataframe">   <thead>     <tr style="text-align: right;">       <th></th>       <th>19</th>     </tr>   </thead>   <tbody>     <tr>       <th>N</th>       <td>20</td>     </tr>     <tr>       <th>Altura</th>       <td>2,5</td>     </tr>     <tr>       <th>Latitudes</th>       <td>-33.4168</td>     </tr>     <tr>       <th>Longitudes</th>       <td>-70.6476</td>     </tr>     <tr>       <th>Radio</th>       <td>0,5</td>     </tr>     <tr>       <th>Codigo</th>       <td>005RI20</td>     </tr>     <tr>       <th>Status</th>       <td>Bueno</td>     </tr>     <tr>       <th>Dap</th>       <td>3</td>     </tr>     <tr>       <th>Nombre</th>       <td>AIlantus</td>     </tr>     <tr>       <th>Calle</th>       <td>SazIe</td>     </tr>     <tr>       <th>TratamIento</th>       <td>MANTENCION</td>     </tr>     <tr>       <th>N° REBROTES</th>       <td>20</td>     </tr>     <tr>       <th>Fisico</th>       <td>NaN</td>     </tr>   </tbody> </table></b></div>')[0];
+                popup_6a72152bdf3e4971b860646e1b146405.setContent(html_818e630969954a2e8fd7a4a1d7b16085);
+            
+
+            marker_c1f6c3848bb048a4a632bf0a356fc1c8.bindPopup(popup_6a72152bdf3e4971b860646e1b146405)
+            ;
+
+            
+        
+    
+            var layer_control_39868132a8514e41b1785ce7f37e5882 = {
+                base_layers : { "Mapa Base OSM" : tile_layer_7fd9533bc4da497385c87439d2cad241,"Google Earth" : tile_layer_3bd7db51d21040c7aa4fcda264ae575a, },
+                overlays : { "Patios" : marker_cluster_bc67d32343bd4584819699b5d90878a6, }
+                };
+            L.control.layers(
+                layer_control_39868132a8514e41b1785ce7f37e5882.base_layers,
+                layer_control_39868132a8514e41b1785ce7f37e5882.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_2e438de97481489287e8598e8063ced4);
+            
+                tile_layer_3bd7db51d21040c7aa4fcda264ae575a.remove();
+        
+    
+                var lat_lng_popup_4a026c94fd6c4640acbac6e2fe4b8356 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_4a026c94fd6c4640acbac6e2fe4b8356
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_2e438de97481489287e8598e8063ced4);
+                    }
+                map_2e438de97481489287e8598e8063ced4.on('click', latLngPop);
+            
+    
+            // FeatureGroup is to store editable layers.
+            var drawnItems = new L.featureGroup().addTo(map_2e438de97481489287e8598e8063ced4);
+            var draw_control_ee6be6fe0b404735b3f52adf08c71876 = new L.Control.Draw({
+                "edit": {"featureGroup": drawnItems}
+                }).addTo(map_2e438de97481489287e8598e8063ced4)
+            map_2e438de97481489287e8598e8063ced4.on(L.Draw.Event.CREATED, function (event) {
+              var layer = event.layer,
+                  type = event.layerType,
+                  coords;
+              var coords = JSON.stringify(layer.toGeoJSON());
+              layer.on('click', function() {
+                alert(coords);
+                console.log(coords);
+                });
+               drawnItems.addLayer(layer);
+             });
+
+        map_2e438de97481489287e8598e8063ced4.on('draw:created', function(e) {
+            drawnItems.addLayer(e.layer);
+        });
+
+        document.getElementById('export').onclick = function(e) {
+            var data = drawnItems.toGeoJSON();
+            var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+            document.getElementById('export').setAttribute('href', 'data:' + convertedData);
+            document.getElementById('export').setAttribute('download','data.geojson');
+        }
+            
+</script>

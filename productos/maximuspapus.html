@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=true; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <style>#map_0e328a6165da4f7d86bd290238d344a9 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.3.6/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.3.6/dist/leaflet-search.min.css"/>
+    <script src="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_0e328a6165da4f7d86bd290238d344a9" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_0e328a6165da4f7d86bd290238d344a9 = L.map(
+        'map_0e328a6165da4f7d86bd290238d344a9', {
+        center: [-33.4172, -70.6505],
+        zoom: 18,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+L.control.scale().addTo(map_0e328a6165da4f7d86bd290238d344a9);
+    
+    
+    
+
+            var macro_element_f446d530711f423b84d35d21c617579f = new L.GeoJSON({'generator': 'overpass-ide', 'copyright': 'The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.', 'timestamp': '2018-07-15T19:49:02Z', 'features': [{'properties': {'name:en': 'Catholic Cementary', 'name': 'Cementerio Católico', 'landuse': 'cemetery', '@id': 'way/33972899'}, 'id': 'way/33972899', 'geometry': {'coordinates': [[[-70.6394021, -33.413032], [-70.6394358, -33.4129117], [-70.6392486, -33.4128086], [-70.6395106, -33.4122333], [-70.6397556, -33.4117895], [-70.6401264, -33.411118], [-70.6430529, -33.4099086], [-70.6432077, -33.4121646], [-70.6432718, -33.4133399], [-70.6433704, -33.4133328], [-70.6434013, -33.41333], [-70.6434216, -33.4139315], [-70.6409248, -33.414036], [-70.6405814, -33.4139635], [-70.6405905, -33.4135495], [-70.6403674, -33.4135313], [-70.6404172, -33.4131825], [-70.6394021, -33.413032]]], 'type': 'Polygon'}, 'type': 'Feature'}, {'properties': {'building': 'yes', 'name': 'Piedra Verde', 'landuse': 'cemetery', '@id': 'way/180645139'}, 'id': 'way/180645139', 'geometry': {'coordinates': [[[-70.6480499, -33.4131105], [-70.6481096, -33.4133798], [-70.6480288, -33.4133923], [-70.6480352, -33.4134211], [-70.6479412, -33.4134356], [-70.6479353, -33.4134086], [-70.6478617, -33.41342], [-70.6478016, -33.4131489], [-70.6480499, -33.4131105]]], 'type': 'Polygon'}, 'type': 'Feature'}, {'properties': {'name': 'Cementerio General', 'landuse': 'cemetery', '@id': 'way/197839099'}, 'id': 'way/197839099', 'geometry': {'coordinates': [[[-70.6437883, -33.4141077], [-70.6438046, -33.4138521], [-70.6437686, -33.4125492], [-70.6449589, -33.4125189], [-70.6448382, -33.4106806], [-70.6447369, -33.4090137], [-70.6469861, -33.4085241], [-70.6498121, -33.4079281], [-70.6517403, -33.4075335], [-70.6531646, -33.4072383], [-70.6531438, -33.4081327], [-70.6531403, -33.4084699], [-70.6531548, -33.409417], [-70.6532699, -33.4096002], [-70.6535062, -33.409601], [-70.6535158, -33.4112772], [-70.6527348, -33.4112654], [-70.6527055, -33.4128434], [-70.6526794, -33.4151684], [-70.652693, -33.4174544], [-70.6517996, -33.4174691], [-70.6505497, -33.4176396], [-70.6505529, -33.4176711], [-70.6505467, -33.4176804], [-70.6505086, -33.4177108], [-70.6503611, -33.4177309], [-70.6503316, -33.4177108], [-70.6502109, -33.4177264], [-70.6501867, -33.4177645], [-70.6500297, -33.4177883], [-70.649999, -33.41776], [-70.649889, -33.4177757], [-70.6498675, -33.4178025], [-70.6497066, -33.4178294], [-70.6496798, -33.4178137], [-70.6496777, -33.4177938], [-70.6484317, -33.4179975], [-70.6474619, -33.4175111], [-70.646853, -33.4171371], [-70.6457958, -33.4165576], [-70.6453493, -33.4163836], [-70.6452286, -33.4163259], [-70.6446046, -33.4162446], [-70.6445157, -33.4162594], [-70.6445049, -33.4162571], [-70.6439057, -33.4161581], [-70.6437883, -33.4141077]]], 'type': 'Polygon'}, 'type': 'Feature'}], 'type': 'FeatureCollection'});
+
+            map_0e328a6165da4f7d86bd290238d344a9.addLayer(macro_element_f446d530711f423b84d35d21c617579f);
+
+            var searchControl = new L.Control.Search({
+                layer: macro_element_f446d530711f423b84d35d21c617579f,
+                propertyName: 'name',
+            
+                initial: false,
+                zoom: 18,
+                position:'topleft',
+                hideMarkerOnCollapse: true
+            
+            
+                });
+                searchControl.on('search:locationfound', function(e) {
+
+                    e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
+                    if(e.layer._popup)
+                        e.layer.openPopup();
+
+                }).on('search:collapsed', function(e) {
+
+                    macro_element_f446d530711f423b84d35d21c617579f.eachLayer(function(layer) {   //restore feature color
+                        macro_element_f446d530711f423b84d35d21c617579f.resetStyle(layer);
+                    });
+                });
+            map_0e328a6165da4f7d86bd290238d344a9.addControl( searchControl );
+
+        
+    var tile_layer_ea99f34913e64d1d825573fb93c0a769 = L.tileLayer(
+        'https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=3cd85f11f4744c0c8c3bdaab8483cde0',
+        {
+        "attribution": "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> UTEM Cartografia, &copy; <a href=\"https://github.com/camiloceacarvajal?tab=repositories/attributions\">CamiloGithub</a>",
+        "detectRetina": false,
+        "maxNativeZoom": 21,
+        "maxZoom": 21,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_0e328a6165da4f7d86bd290238d344a9);
+    var tile_layer_3f6faee59532442fa3cdebab54961247 = L.tileLayer(
+        'http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+        {
+        "attribution": "&copy; <a href=\"https://earth.google.com/web/\">google</a> UTEM Cartografia, &copy; <a href=\"https://github.com/camiloceacarvajal?tab=repositories/attributions\">CamiloGithub</a>",
+        "detectRetina": false,
+        "maxNativeZoom": 21,
+        "maxZoom": 21,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": [
+                "mt0",
+                "mt1",
+                "mt2",
+                "mt3"
+        ]
+}).addTo(map_0e328a6165da4f7d86bd290238d344a9);
+    
+        var marker_13fd25f28337411ea3ffc7ced49c6d4d = L.marker(
+            [-33.4177, -70.6504],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_0e328a6165da4f7d86bd290238d344a9);
+        
+    
+
+                var icon_61dac8d1a2ee4d22bc6d920d303689f5 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_13fd25f28337411ea3ffc7ced49c6d4d.setIcon(icon_61dac8d1a2ee4d22bc6d920d303689f5);
+            
+    
+            var popup_50e216c62f444bd6a67a8108ba56337e = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ae70590f41de425a97f6f0c045ef3863 = $('<div id="html_ae70590f41de425a97f6f0c045ef3863" style="width: 100.0%; height: 100.0%;"><a href="http://munirecoleta.maps.arcgis.com/apps/webappviewer/index.html?id=7361880dbdcd44d1b02ab91c1d07d5eb" target="_blank"> Mapa Recoleta </a></div>')[0];
+                popup_50e216c62f444bd6a67a8108ba56337e.setContent(html_ae70590f41de425a97f6f0c045ef3863);
+            
+
+            marker_13fd25f28337411ea3ffc7ced49c6d4d.bindPopup(popup_50e216c62f444bd6a67a8108ba56337e)
+            ;
+
+            
+        
+    
+        var marker_38e9d2dda4cf4fce917f1f6fc02b7ef2 = L.marker(
+            [-33.4178, -70.6497],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_0e328a6165da4f7d86bd290238d344a9);
+        
+    
+
+                var icon_02cfca219b3d4a2c82b2e77ab0732871 = L.AwesomeMarkers.icon({
+                    icon: 'tree-deciduous',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_38e9d2dda4cf4fce917f1f6fc02b7ef2.setIcon(icon_02cfca219b3d4a2c82b2e77ab0732871);
+            
+    
+            var popup_6bc06bafd3154a11b3956d6b6de6ce5a = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b7d7d31d0bcc42dc921bb12573b8df99 = $('<div id="html_b7d7d31d0bcc42dc921bb12573b8df99" style="width: 100.0%; height: 100.0%;"><a href="https://www.mapillary.com/app/?lat=-33.41700338888893&lng=-70.65034652777774&z=17&pKey=aTS8sJ-LHWhn5A6Ti5u8rw" target="_blank">Mapa foto </a></div>')[0];
+                popup_6bc06bafd3154a11b3956d6b6de6ce5a.setContent(html_b7d7d31d0bcc42dc921bb12573b8df99);
+            
+
+            marker_38e9d2dda4cf4fce917f1f6fc02b7ef2.bindPopup(popup_6bc06bafd3154a11b3956d6b6de6ce5a)
+            ;
+
+            
+        
+    
+            var measure_control_a4335465950441709b260ee43e6f843b = new L.Control.Measure(
+            {"secondaryLengthUnit": "miles", "secondaryAreaUnit": "acres", "position": "topright", "primaryLengthUnit": "meters", "primaryAreaUnit": "sqmeters"});
+            map_0e328a6165da4f7d86bd290238d344a9.addControl(measure_control_a4335465950441709b260ee43e6f843b);
+
+        
+    
+            L.control.fullscreen({
+                position: 'topright',
+                title: 'Expandir',
+                titleCancel: 'salir',
+                forceSeparateButton: true,
+                }).addTo(map_0e328a6165da4f7d86bd290238d344a9);
+            map_0e328a6165da4f7d86bd290238d344a9.on('enterFullscreen', function(){
+                console.log('entered fullscreen');
+            });
+
+        
+    
+            var feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29 = L.featureGroup(
+                ).addTo(map_0e328a6165da4f7d86bd290238d344a9);
+        
+    
+            var circle_marker_908bffbd512849fcaccc0477e571037d = L.circleMarker(
+                [-33.41665799729526, -70.64788299612701],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "yellow",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_687b724e911a4105af8b5b032aa543d6 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_6f76c6becca947a198720abd947d6155 = $('<div id="html_6f76c6becca947a198720abd947d6155" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AP01-<b>ALTURA:</b> 4METROS-<b>ESTADO:</b> Regular-<b>RADIO:</b> 2-<b>DAP:</b> 15-<b>NOMBRE:</b>CIruelo rojo</div>')[0];
+                popup_687b724e911a4105af8b5b032aa543d6.setContent(html_6f76c6becca947a198720abd947d6155);
+            
+
+            circle_marker_908bffbd512849fcaccc0477e571037d.bindPopup(popup_687b724e911a4105af8b5b032aa543d6)
+            ;
+
+            
+        
+    
+            var circle_marker_e0209c8d263747288cc907f02b7c4d51 = L.circleMarker(
+                [-33.416737038642175, -70.64761796034873],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "yellow",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_0b4d2625a10e47c1912b7485e051f143 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e855f31e4ea7464891a0fb5ea862e31d = $('<div id="html_e855f31e4ea7464891a0fb5ea862e31d" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AP02-<b>ALTURA:</b> 3METROS-<b>ESTADO:</b> Regular-<b>RADIO:</b> 1-<b>DAP:</b> 19-<b>NOMBRE:</b>CIruelo rojo</div>')[0];
+                popup_0b4d2625a10e47c1912b7485e051f143.setContent(html_e855f31e4ea7464891a0fb5ea862e31d);
+            
+
+            circle_marker_e0209c8d263747288cc907f02b7c4d51.bindPopup(popup_0b4d2625a10e47c1912b7485e051f143)
+            ;
+
+            
+        
+    
+            var circle_marker_c657ee4fcc3640f08f5525b9ab481789 = L.circleMarker(
+                [-33.41684097424149, -70.64801400527358],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "yellow",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_43b11ac117cc4edab94ae32d999c5931 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_03d5ce6f9b5a4aa7aa3ca9eb65dcc55c = $('<div id="html_03d5ce6f9b5a4aa7aa3ca9eb65dcc55c" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AP03-<b>ALTURA:</b> 3METROS-<b>ESTADO:</b> Regular-<b>RADIO:</b> 1,5-<b>DAP:</b> 13-<b>NOMBRE:</b>CIruelo rojo</div>')[0];
+                popup_43b11ac117cc4edab94ae32d999c5931.setContent(html_03d5ce6f9b5a4aa7aa3ca9eb65dcc55c);
+            
+
+            circle_marker_c657ee4fcc3640f08f5525b9ab481789.bindPopup(popup_43b11ac117cc4edab94ae32d999c5931)
+            ;
+
+            
+        
+    
+            var circle_marker_3de0f842f973422fa6c7a7975f55cf9b = L.circleMarker(
+                [-33.416689010336995, -70.64785801805556],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "yellow",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_709abbd102264670a78b96f8b14523ea = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_084d8991122245c699756f282fac6e68 = $('<div id="html_084d8991122245c699756f282fac6e68" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AP04-<b>ALTURA:</b> 2,5METROS-<b>ESTADO:</b> Regular-<b>RADIO:</b> 0,5-<b>DAP:</b> 11-<b>NOMBRE:</b>CIruelo rojo</div>')[0];
+                popup_709abbd102264670a78b96f8b14523ea.setContent(html_084d8991122245c699756f282fac6e68);
+            
+
+            circle_marker_3de0f842f973422fa6c7a7975f55cf9b.bindPopup(popup_709abbd102264670a78b96f8b14523ea)
+            ;
+
+            
+        
+    
+            var circle_marker_6dd6ac16d6b7404fa4bdb57433769d2f = L.circleMarker(
+                [-33.417030991986394, -70.64773798920214],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "yellow",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_cf7c2f74e58f461dba57e9cbcd26152e = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_669f5c0a4f5d49849b7e51d1dd6c896f = $('<div id="html_669f5c0a4f5d49849b7e51d1dd6c896f" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AP05-<b>ALTURA:</b> 2,2METROS-<b>ESTADO:</b> Regular-<b>RADIO:</b> 1,5-<b>DAP:</b> 11-<b>NOMBRE:</b>CIruelo rojo</div>')[0];
+                popup_cf7c2f74e58f461dba57e9cbcd26152e.setContent(html_669f5c0a4f5d49849b7e51d1dd6c896f);
+            
+
+            circle_marker_6dd6ac16d6b7404fa4bdb57433769d2f.bindPopup(popup_cf7c2f74e58f461dba57e9cbcd26152e)
+            ;
+
+            
+        
+    
+            var circle_marker_ac88d7536d5b42adbea04ac3c2a6f3d5 = L.circleMarker(
+                [-33.41663201339543, -70.6480399891734],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "red",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_b184090ef72546a7b9b1afce76e7e5c4 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_0e42ad00c4634ab0a4dfb921e1e99fed = $('<div id="html_0e42ad00c4634ab0a4dfb921e1e99fed" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AI06-<b>ALTURA:</b> 0,5METROS-<b>ESTADO:</b> Malo-<b>RADIO:</b> 0,5-<b>DAP:</b> 50-<b>NOMBRE:</b>Palmera canarIa</div>')[0];
+                popup_b184090ef72546a7b9b1afce76e7e5c4.setContent(html_0e42ad00c4634ab0a4dfb921e1e99fed);
+            
+
+            circle_marker_ac88d7536d5b42adbea04ac3c2a6f3d5.bindPopup(popup_b184090ef72546a7b9b1afce76e7e5c4)
+            ;
+
+            
+        
+    
+            var circle_marker_f3d2d84cb8a6420eb17f1775f24e5421 = L.circleMarker(
+                [-33.41703996062279, -70.64781602472065],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_bfa58645fb114151a29039b90af33893 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_1dfbd6e9135440f4a19ba37c6ca0eae5 = $('<div id="html_1dfbd6e9135440f4a19ba37c6ca0eae5" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AI07-<b>ALTURA:</b> 2,5METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 0,5-<b>DAP:</b> 3-<b>NOMBRE:</b>CIruelo verde</div>')[0];
+                popup_bfa58645fb114151a29039b90af33893.setContent(html_1dfbd6e9135440f4a19ba37c6ca0eae5);
+            
+
+            circle_marker_f3d2d84cb8a6420eb17f1775f24e5421.bindPopup(popup_bfa58645fb114151a29039b90af33893)
+            ;
+
+            
+        
+    
+            var circle_marker_ab1992f811164b368fd067ee6243e24e = L.circleMarker(
+                [-33.417054964229465, -70.64788400195539],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_bc02cce0d1004fcf8924e14e95a3e966 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_8e125aed1c004c8e96257d0eeea25969 = $('<div id="html_8e125aed1c004c8e96257d0eeea25969" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AI08-<b>ALTURA:</b> 3,5METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 1-<b>DAP:</b> 6-<b>NOMBRE:</b>CIruelo verde</div>')[0];
+                popup_bc02cce0d1004fcf8924e14e95a3e966.setContent(html_8e125aed1c004c8e96257d0eeea25969);
+            
+
+            circle_marker_ab1992f811164b368fd067ee6243e24e.bindPopup(popup_bc02cce0d1004fcf8924e14e95a3e966)
+            ;
+
+            
+        
+    
+            var circle_marker_367b39609e654bcb9655442b57833933 = L.circleMarker(
+                [-33.41700098477304, -70.64795197919011],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_8ccefe8de3c64ccda697a51616056318 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_944c3c71d4d8441a9a72bc005b372d38 = $('<div id="html_944c3c71d4d8441a9a72bc005b372d38" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AI09-<b>ALTURA:</b> 0,5METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 2-<b>DAP:</b> 50-<b>NOMBRE:</b>Palmera canarIa</div>')[0];
+                popup_8ccefe8de3c64ccda697a51616056318.setContent(html_944c3c71d4d8441a9a72bc005b372d38);
+            
+
+            circle_marker_367b39609e654bcb9655442b57833933.bindPopup(popup_8ccefe8de3c64ccda697a51616056318)
+            ;
+
+            
+        
+    
+            var circle_marker_50e35fed8cbb4ecdae40459e33f25556 = L.circleMarker(
+                [-33.416964020580046, -70.64806396141648],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "yellow",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_088717d4cc8e448db23661c489c485d6 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_3bcc8274a83444888237735bb115ddf8 = $('<div id="html_3bcc8274a83444888237735bb115ddf8" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AI10-<b>ALTURA:</b> 8METROS-<b>ESTADO:</b> Regular-<b>RADIO:</b> 4-<b>DAP:</b> 44-<b>NOMBRE:</b>CassuarIna</div>')[0];
+                popup_088717d4cc8e448db23661c489c485d6.setContent(html_3bcc8274a83444888237735bb115ddf8);
+            
+
+            circle_marker_50e35fed8cbb4ecdae40459e33f25556.bindPopup(popup_088717d4cc8e448db23661c489c485d6)
+            ;
+
+            
+        
+    
+            var circle_marker_5ddb2b62daeb41e095432fa694178aa5 = L.circleMarker(
+                [-33.41698598116636, -70.64799799583852],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_bb7b4a81c81f441891f7799de66543cd = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_024d500846c54cabbf76593b83714537 = $('<div id="html_024d500846c54cabbf76593b83714537" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AP11-<b>ALTURA:</b> 6METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 3,5-<b>DAP:</b> 25-<b>NOMBRE:</b>MelIa</div>')[0];
+                popup_bb7b4a81c81f441891f7799de66543cd.setContent(html_024d500846c54cabbf76593b83714537);
+            
+
+            circle_marker_5ddb2b62daeb41e095432fa694178aa5.bindPopup(popup_bb7b4a81c81f441891f7799de66543cd)
+            ;
+
+            
+        
+    
+            var circle_marker_39093c672ee34dfda76bb9ed64a80442 = L.circleMarker(
+                [-33.41679001227021, -70.64813202247024],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_1c15b74b33234711984743d6aa9d6280 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f857ef547fa645a79a3919a06e04fc08 = $('<div id="html_f857ef547fa645a79a3919a06e04fc08" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AP12-<b>ALTURA:</b> 0,2METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 0,5-<b>DAP:</b> 20-<b>NOMBRE:</b>Palmera canarIa</div>')[0];
+                popup_1c15b74b33234711984743d6aa9d6280.setContent(html_f857ef547fa645a79a3919a06e04fc08);
+            
+
+            circle_marker_39093c672ee34dfda76bb9ed64a80442.bindPopup(popup_1c15b74b33234711984743d6aa9d6280)
+            ;
+
+            
+        
+    
+            var circle_marker_cb2943d65356420784dd6c3526c7bd5c = L.circleMarker(
+                [-33.41674801893532, -70.6481480319053],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_51b8a12d47294bfaa4d529c678c49c77 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7cd395fb4f874842b1b7cc2c1f3ebfc5 = $('<div id="html_7cd395fb4f874842b1b7cc2c1f3ebfc5" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 004AI33-<b>ALTURA:</b> 3METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 0,5-<b>DAP:</b> 2-<b>NOMBRE:</b>Laurel</div>')[0];
+                popup_51b8a12d47294bfaa4d529c678c49c77.setContent(html_7cd395fb4f874842b1b7cc2c1f3ebfc5);
+            
+
+            circle_marker_cb2943d65356420784dd6c3526c7bd5c.bindPopup(popup_51b8a12d47294bfaa4d529c678c49c77)
+            ;
+
+            
+        
+    
+            var circle_marker_1003ecd745614fed857d238f5f81a36e = L.circleMarker(
+                [-33.41667601838708, -70.64777503721416],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "red",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_4d16d35dc3e14aae94cbacdd59cafc3a = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f29926bb51954f58a4299e4a026ba0d2 = $('<div id="html_f29926bb51954f58a4299e4a026ba0d2" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005AP14-<b>ALTURA:</b> 0METROS-<b>ESTADO:</b> Malo-<b>RADIO:</b> 0,5-<b>DAP:</b> 35-<b>NOMBRE:</b>Alamo </div>')[0];
+                popup_4d16d35dc3e14aae94cbacdd59cafc3a.setContent(html_f29926bb51954f58a4299e4a026ba0d2);
+            
+
+            circle_marker_1003ecd745614fed857d238f5f81a36e.bindPopup(popup_4d16d35dc3e14aae94cbacdd59cafc3a)
+            ;
+
+            
+        
+    
+            var circle_marker_7dedc1ee83584c85aadc2fabccf8c62a = L.circleMarker(
+                [-33.416710970923305, -70.6477170344442],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_9a3a7da1f3714323baa2dd67eb392815 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7ba63ecb1b454611894a43a915ec2ece = $('<div id="html_7ba63ecb1b454611894a43a915ec2ece" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005RI15-<b>ALTURA:</b> 2,5METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 0,5-<b>DAP:</b> 3-<b>NOMBRE:</b>AIlantus</div>')[0];
+                popup_9a3a7da1f3714323baa2dd67eb392815.setContent(html_7ba63ecb1b454611894a43a915ec2ece);
+            
+
+            circle_marker_7dedc1ee83584c85aadc2fabccf8c62a.bindPopup(popup_9a3a7da1f3714323baa2dd67eb392815)
+            ;
+
+            
+        
+    
+            var circle_marker_c5c1a51803cc485fa18b0e6db4c2a71b = L.circleMarker(
+                [-33.416944993659854, -70.6476110033691],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_7c316ebfa6724acba09eb10562ce7ed1 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_1cd71c9a44c04b4f88528b4117006b9e = $('<div id="html_1cd71c9a44c04b4f88528b4117006b9e" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005RI16-<b>ALTURA:</b> 2,5METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 0,5-<b>DAP:</b> 3-<b>NOMBRE:</b>AIlantus</div>')[0];
+                popup_7c316ebfa6724acba09eb10562ce7ed1.setContent(html_1cd71c9a44c04b4f88528b4117006b9e);
+            
+
+            circle_marker_c5c1a51803cc485fa18b0e6db4c2a71b.bindPopup(popup_7c316ebfa6724acba09eb10562ce7ed1)
+            ;
+
+            
+        
+    
+            var circle_marker_2c7b891d50d24414b9679ecfce94d0b8 = L.circleMarker(
+                [-33.416754975914955, -70.64792599529028],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_aae0192b0cd148b383b01136470ada1f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d0cb22c916eb4a1f9a64b6848cc31888 = $('<div id="html_d0cb22c916eb4a1f9a64b6848cc31888" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005RI17-<b>ALTURA:</b> 2,5METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 0,5-<b>DAP:</b> 3-<b>NOMBRE:</b>AIlantus</div>')[0];
+                popup_aae0192b0cd148b383b01136470ada1f.setContent(html_d0cb22c916eb4a1f9a64b6848cc31888);
+            
+
+            circle_marker_2c7b891d50d24414b9679ecfce94d0b8.bindPopup(popup_aae0192b0cd148b383b01136470ada1f)
+            ;
+
+            
+        
+    
+            var circle_marker_2cf7cb9315d5431f8c5d97c3e08af24c = L.circleMarker(
+                [-33.41695496812463, -70.64816404134034],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_d5b173360fc74ce98f90b4265a4b70b2 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_793884fb0d9f410aa8cb0c6516e53330 = $('<div id="html_793884fb0d9f410aa8cb0c6516e53330" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005RI18-<b>ALTURA:</b> 2,5METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 0,5-<b>DAP:</b> 3-<b>NOMBRE:</b>AIlantus</div>')[0];
+                popup_d5b173360fc74ce98f90b4265a4b70b2.setContent(html_793884fb0d9f410aa8cb0c6516e53330);
+            
+
+            circle_marker_2cf7cb9315d5431f8c5d97c3e08af24c.bindPopup(popup_d5b173360fc74ce98f90b4265a4b70b2)
+            ;
+
+            
+        
+    
+            var circle_marker_6146a284712a4a459a2aaf4c071fd7a8 = L.circleMarker(
+                [-33.41669102199376, -70.64762500114738],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_e1298d2074dc45d6985d192f002920e6 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_a638120eda4544119e44857f076cfe7c = $('<div id="html_a638120eda4544119e44857f076cfe7c" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005RI19-<b>ALTURA:</b> 2,5METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 0,5-<b>DAP:</b> 3-<b>NOMBRE:</b>AIlantus</div>')[0];
+                popup_e1298d2074dc45d6985d192f002920e6.setContent(html_a638120eda4544119e44857f076cfe7c);
+            
+
+            circle_marker_6146a284712a4a459a2aaf4c071fd7a8.bindPopup(popup_e1298d2074dc45d6985d192f002920e6)
+            ;
+
+            
+        
+    
+            var circle_marker_6539b454b8e64ee094dc2efc2112a795 = L.circleMarker(
+                [-33.41677903197705, -70.6475779786706],
+                {
+  "bubblingMouseEvents": true,
+  "color": "black",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "green",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 8,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29);
+            
+    
+            var popup_bc86597061f74d7997021941f4d5363c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_ddcf4dbd16d844b39eb3850702c5147b = $('<div id="html_ddcf4dbd16d844b39eb3850702c5147b" style="width: 100.0%; height: 100.0%;"><b>CODIGO:</b> 005RI20-<b>ALTURA:</b> 2,5METROS-<b>ESTADO:</b> Bueno-<b>RADIO:</b> 0,5-<b>DAP:</b> 3-<b>NOMBRE:</b>AIlantus</div>')[0];
+                popup_bc86597061f74d7997021941f4d5363c.setContent(html_ddcf4dbd16d844b39eb3850702c5147b);
+            
+
+            circle_marker_6539b454b8e64ee094dc2efc2112a795.bindPopup(popup_bc86597061f74d7997021941f4d5363c)
+            ;
+
+            
+        
+    
+            var layer_control_8458edcfd96a478a856aed96e85b2ad0 = {
+                base_layers : { "MAPA BASE" : tile_layer_ea99f34913e64d1d825573fb93c0a769,"Google Earth" : tile_layer_3f6faee59532442fa3cdebab54961247, },
+                overlays : { "Patios" : feature_group_7e3fa54c59e9486eb28c89ff5dd3bc29, }
+                };
+            L.control.layers(
+                layer_control_8458edcfd96a478a856aed96e85b2ad0.base_layers,
+                layer_control_8458edcfd96a478a856aed96e85b2ad0.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_0e328a6165da4f7d86bd290238d344a9);
+            
+                tile_layer_3f6faee59532442fa3cdebab54961247.remove();
+        
+    
+                var lat_lng_popup_008f369e19c6435f995845cb93480eee = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_008f369e19c6435f995845cb93480eee
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_0e328a6165da4f7d86bd290238d344a9);
+                    }
+                map_0e328a6165da4f7d86bd290238d344a9.on('click', latLngPop);
+            
+</script>
