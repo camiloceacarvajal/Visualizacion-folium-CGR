@@ -1,2 +1,3 @@
 # Visualizacion-folium-CGR
 Visualización de datos con la tecnología de mapas web para el Cementerio General de Recoleta
+Utilizando para su desarrollo software libre. Este sistema de información geográfica trabaja  a través de la WEB. Es una herramienta que facilita la gestión de una gran cantidad de datos sin perder la perspectiva del lugar en el cual se han generado. permite revisar los trabajos realizados desde cualquier ordenador conectado a Internet. Además es  capaz de asociar la población arbórea  a las coordenadas en las cuales se sitúan.Y permite acceder a todos esos datos desde cualquier ordenador, incluso desde el celular.
