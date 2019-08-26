@@ -1,0 +1,395 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  -70.6505,-33.4379 ]
+    },
+    "properties": {
+    "Comuna":"Santiago"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7029,-33.4881 ]
+    },
+    "properties": {
+    "Comuna":"Cerrillos"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7306,-33.4290 ]
+    },
+    "properties": {
+    "Comuna":"Cerro Navia"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.6655,-33.5562 ]
+    },
+    "properties": {
+    "Comuna":"El Bosque"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.6357,-33.3749 ]
+    },
+    "properties": {
+    "Comuna":"Huechuraba"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.6644,-33.5347 ]
+    },
+    "properties": {
+    "Comuna":"La Cisterna"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.6006,-33.5204 ]
+    },
+    "properties": {
+    "Comuna":"La Florida"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.6298,-33.5834 ]
+    },
+    "properties": {
+    "Comuna":"La Pintana"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.5430,-33.4424 ]
+    },
+    "properties": {
+    "Comuna":"La Reina"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.5671,-33.4085 ]
+    },
+    "properties": {
+    "Comuna":"Las Condes"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.5045,-33.3617 ]
+    },
+    "properties": {
+    "Comuna":"Lo Barnechea"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7562,-33.5095 ]
+    },
+    "properties": {
+    "Comuna":"Maipú"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.5418,-33.4766 ]
+    },
+    "properties": {
+    "Comuna":"Peñalolén"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7519,-33.4368 ]
+    },
+    "properties": {
+    "Comuna":"Pudahuel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7317,-33.3679 ]
+    },
+    "properties": {
+    "Comuna":"Quilicura"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.6432,-33.4022 ]
+    },
+    "properties": {
+    "Comuna":"Recoleta"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7051,-33.4043 ]
+    },
+    "properties": {
+    "Comuna":"Renca"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.6290,-33.4967 ]
+    },
+    "properties": {
+    "Comuna":"San Joaquín"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.5765,-33.3872 ]
+    },
+    "properties": {
+    "Comuna":"Vitacura"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.5753,-33.6096 ]
+    },
+    "properties": {
+    "Comuna":"Puente Alto"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.5729,-33.6348 ]
+    },
+    "properties": {
+    "Comuna":"Pirque"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.3525,-33.6422 ]
+    },
+    "properties": {
+    "Comuna":"San José de Maipo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.6735,-33.2031 ]
+    },
+    "properties": {
+    "Comuna":"Colina"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.8697,-33.2884 ]
+    },
+    "properties": {
+    "Comuna":"Lampa"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.9290,-33.0856 ]
+    },
+    "properties": {
+    "Comuna":"Tiltil"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7051,-33.5925 ]
+    },
+    "properties": {
+    "Comuna":"San Bernardo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7417,-33.7315 ]
+    },
+    "properties": {
+    "Comuna":"Buin"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7602,-33.6308 ]
+    },
+    "properties": {
+    "Comuna":"Calera de Tango"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.7392,-33.8102 ]
+    },
+    "properties": {
+    "Comuna":"Paine"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.2147,-33.6856 ]
+    },
+    "properties": {
+    "Comuna":"Melipilla"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.1001,-34.0336 ]
+    },
+    "properties": {
+    "Comuna":"Alhué"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.1274,-33.4026 ]
+    },
+    "properties": {
+    "Comuna":"Curacaví"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.1195,-33.5164 ]
+    },
+    "properties": {
+    "Comuna":"María Pinto"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.4537,-33.8944 ]
+    },
+    "properties": {
+    "Comuna":"San Pedro"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.9293,-33.6648 ]
+    },
+    "properties": {
+    "Comuna":"Talagante"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.9782,-33.6785 ]
+    },
+    "properties": {
+    "Comuna":"El Monte"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.9034,-33.7536 ]
+    },
+    "properties": {
+    "Comuna":"Isla de Maipo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.8022,-33.5673 ]
+    },
+    "properties": {
+    "Comuna":"Padre Hurtado"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.8785,-33.6060 ]
+    },
+    "properties": {
+    "Comuna":"Peñaflor"
+    }
+  }
+]
+}
