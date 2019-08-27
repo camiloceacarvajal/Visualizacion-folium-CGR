@@ -8,7 +8,8 @@
        "coordinates":  [  -70.6505,-33.4379 ]
     },
     "properties": {
-    "Comuna":"Santiago"
+    "name":"Santiago",
+    "pop_max":1
     }
   },
   {
@@ -18,7 +19,8 @@
        "coordinates":  [ -70.7029,-33.4881 ]
     },
     "properties": {
-    "Comuna":"Cerrillos"
+    "name":"Cerrillos",
+    "pop_max":2
     }
   },
   {
@@ -28,7 +30,8 @@
        "coordinates":  [ -70.7306,-33.4290 ]
     },
     "properties": {
-    "Comuna":"Cerro Navia"
+    "name":"Cerro Navia",
+    "pop_max":3
     }
   },
   {
@@ -38,7 +41,8 @@
        "coordinates":  [ -70.6655,-33.5562 ]
     },
     "properties": {
-    "Comuna":"El Bosque"
+    "name":"El Bosque",
+    "pop_max":4
     }
   },
   {
@@ -48,7 +52,8 @@
        "coordinates":  [ -70.6357,-33.3749 ]
     },
     "properties": {
-    "Comuna":"Huechuraba"
+    "name":"Huechuraba",
+    "pop_max":5
     }
   },
   {
@@ -58,7 +63,8 @@
        "coordinates":  [ -70.6644,-33.5347 ]
     },
     "properties": {
-    "Comuna":"La Cisterna"
+    "name":"La Cisterna",
+    "pop_max":6
     }
   },
   {
@@ -68,7 +74,8 @@
        "coordinates":  [ -70.6006,-33.5204 ]
     },
     "properties": {
-    "Comuna":"La Florida"
+    "name":"La Florida",
+    "pop_max":7
     }
   },
   {
@@ -78,7 +85,8 @@
        "coordinates":  [ -70.6298,-33.5834 ]
     },
     "properties": {
-    "Comuna":"La Pintana"
+    "name":"La Pintana",
+    "pop_max":8
     }
   },
   {
@@ -88,7 +96,8 @@
        "coordinates":  [ -70.5430,-33.4424 ]
     },
     "properties": {
-    "Comuna":"La Reina"
+    "name":"La Reina",
+    "pop_max":9
     }
   },
   {
@@ -98,7 +107,8 @@
        "coordinates":  [ -70.5671,-33.4085 ]
     },
     "properties": {
-    "Comuna":"Las Condes"
+    "name":"Las Condes",
+    "pop_max":10
     }
   },
   {
@@ -108,7 +118,8 @@
        "coordinates":  [ -70.5045,-33.3617 ]
     },
     "properties": {
-    "Comuna":"Lo Barnechea"
+    "name":"Lo Barnechea",
+    "pop_max":11
     }
   },
   {
@@ -118,7 +129,8 @@
        "coordinates":  [ -70.7562,-33.5095 ]
     },
     "properties": {
-    "Comuna":"Maipú"
+    "name":"Maipú",
+    "pop_max":12
     }
   },
   {
@@ -128,7 +140,8 @@
        "coordinates":  [ -70.5418,-33.4766 ]
     },
     "properties": {
-    "Comuna":"Peñalolén"
+    "name":"Peñalolén",
+    "pop_max":13
     }
   },
   {
@@ -138,7 +151,8 @@
        "coordinates":  [ -70.7519,-33.4368 ]
     },
     "properties": {
-    "Comuna":"Pudahuel"
+    "name":"Pudahuel",
+    "pop_max":14
     }
   },
   {
@@ -148,7 +162,8 @@
        "coordinates":  [ -70.7317,-33.3679 ]
     },
     "properties": {
-    "Comuna":"Quilicura"
+    "name":"Quilicura",
+    "pop_max":15
     }
   },
   {
@@ -158,7 +173,8 @@
        "coordinates":  [ -70.6432,-33.4022 ]
     },
     "properties": {
-    "Comuna":"Recoleta"
+    "name":"Recoleta",
+    "pop_max":16
     }
   },
   {
@@ -168,7 +184,8 @@
        "coordinates":  [ -70.7051,-33.4043 ]
     },
     "properties": {
-    "Comuna":"Renca"
+    "name":"Renca",
+    "pop_max":17
     }
   },
   {
@@ -178,7 +195,8 @@
        "coordinates":  [ -70.6290,-33.4967 ]
     },
     "properties": {
-    "Comuna":"San Joaquín"
+    "name":"San Joaquín",
+    "pop_max":18
     }
   },
   {
@@ -188,7 +206,8 @@
        "coordinates":  [ -70.5765,-33.3872 ]
     },
     "properties": {
-    "Comuna":"Vitacura"
+    "name":"Vitacura",
+    "pop_max":19
     }
   },
   {
@@ -198,7 +217,8 @@
        "coordinates":  [ -70.5753,-33.6096 ]
     },
     "properties": {
-    "Comuna":"Puente Alto"
+    "name":"Puente Alto",
+    "pop_max":20
     }
   },
   {
@@ -208,7 +228,8 @@
        "coordinates":  [ -70.5729,-33.6348 ]
     },
     "properties": {
-    "Comuna":"Pirque"
+    "name":"Pirque",
+    "pop_max":21
     }
   },
   {
@@ -218,7 +239,8 @@
        "coordinates":  [ -70.3525,-33.6422 ]
     },
     "properties": {
-    "Comuna":"San José de Maipo"
+    "name":"San José de Maipo",
+    "pop_max":22
     }
   },
   {
@@ -228,7 +250,8 @@
        "coordinates":  [ -70.6735,-33.2031 ]
     },
     "properties": {
-    "Comuna":"Colina"
+    "name":"Colina",
+    "pop_max":23
     }
   },
   {
@@ -238,7 +261,8 @@
        "coordinates":  [ -70.8697,-33.2884 ]
     },
     "properties": {
-    "Comuna":"Lampa"
+    "name":"Lampa",
+    "pop_max":24
     }
   },
   {
@@ -248,7 +272,8 @@
        "coordinates":  [ -70.9290,-33.0856 ]
     },
     "properties": {
-    "Comuna":"Tiltil"
+    "name":"Tiltil",
+    "pop_max":25
     }
   },
   {
@@ -258,7 +283,8 @@
        "coordinates":  [ -70.7051,-33.5925 ]
     },
     "properties": {
-    "Comuna":"San Bernardo"
+    "name":"San Bernardo",
+    "pop_max":26
     }
   },
   {
@@ -268,7 +294,8 @@
        "coordinates":  [ -70.7417,-33.7315 ]
     },
     "properties": {
-    "Comuna":"Buin"
+    "name":"Buin",
+    "pop_max":27
     }
   },
   {
@@ -278,7 +305,8 @@
        "coordinates":  [ -70.7602,-33.6308 ]
     },
     "properties": {
-    "Comuna":"Calera de Tango"
+    "name":"Calera de Tango",
+    "pop_max":28
     }
   },
   {
@@ -288,7 +316,8 @@
        "coordinates":  [ -70.7392,-33.8102 ]
     },
     "properties": {
-    "Comuna":"Paine"
+    "name":"Paine",
+    "pop_max":29
     }
   },
   {
@@ -298,7 +327,8 @@
        "coordinates":  [ -71.2147,-33.6856 ]
     },
     "properties": {
-    "Comuna":"Melipilla"
+    "name":"Melipilla",
+    "pop_max":30
     }
   },
   {
@@ -308,7 +338,8 @@
        "coordinates":  [ -71.1001,-34.0336 ]
     },
     "properties": {
-    "Comuna":"Alhué"
+    "name":"Alhué",
+    "pop_max":31
     }
   },
   {
@@ -318,7 +349,8 @@
        "coordinates":  [ -71.1274,-33.4026 ]
     },
     "properties": {
-    "Comuna":"Curacaví"
+    "name":"Curacaví",
+    "pop_max":32
     }
   },
   {
@@ -328,7 +360,8 @@
        "coordinates":  [ -71.1195,-33.5164 ]
     },
     "properties": {
-    "Comuna":"María Pinto"
+    "name":"María Pinto",
+    "pop_max":33
     }
   },
   {
@@ -338,7 +371,8 @@
        "coordinates":  [ -71.4537,-33.8944 ]
     },
     "properties": {
-    "Comuna":"San Pedro"
+    "name":"San Pedro",
+    "pop_max":34
     }
   },
   {
@@ -348,7 +382,8 @@
        "coordinates":  [ -70.9293,-33.6648 ]
     },
     "properties": {
-    "Comuna":"Talagante"
+    "name":"Talagante",
+    "pop_max":35
     }
   },
   {
@@ -358,7 +393,8 @@
        "coordinates":  [ -70.9782,-33.6785 ]
     },
     "properties": {
-    "Comuna":"El Monte"
+    "name":"El Monte",
+    "pop_max":36
     }
   },
   {
@@ -368,7 +404,8 @@
        "coordinates":  [ -70.9034,-33.7536 ]
     },
     "properties": {
-    "Comuna":"Isla de Maipo"
+    "name":"Isla de Maipo",
+    "pop_max":37
     }
   },
   {
@@ -378,7 +415,8 @@
        "coordinates":  [ -70.8022,-33.5673 ]
     },
     "properties": {
-    "Comuna":"Padre Hurtado"
+    "name":"Padre Hurtado",
+    "pop_max":38
     }
   },
   {
@@ -388,7 +426,8 @@
        "coordinates":  [ -70.8785,-33.6060 ]
     },
     "properties": {
-    "Comuna":"Peñaflor"
+    "name":"Peñaflor",
+    "pop_max":39
     }
   }
 ]
